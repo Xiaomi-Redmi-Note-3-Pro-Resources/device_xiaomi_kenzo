@@ -249,7 +249,7 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/android_touch/doubletap2wake"
 TARGET_ENABLE_MEDIADRM_64 := true
 
 # Inherit from the proprietary version
--include vendor/xiaomi/kenzo/BoardConfigVendor.mk
+include vendor/xiaomi/kenzo/BoardConfigVendor.mk
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true

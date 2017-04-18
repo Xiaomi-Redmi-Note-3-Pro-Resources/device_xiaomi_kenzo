@@ -24,7 +24,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/xiaomi/kenzo/kenzo-vendor.mk)
+$(call inherit-product, vendor/xiaomi/kenzo/kenzo-vendor.mk)
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
