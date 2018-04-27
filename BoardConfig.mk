@@ -184,9 +184,6 @@ TARGET_HAS_MEMFD_BACKPORT := true
 # Lights
 BOARD_LIGHTS_VARIANT := aw2013
 
-# Media
-TARGET_USES_MEDIA_EXTENSIONS := true
-
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
