@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="screen_gestures_panel_title">Device Extras</string>
+    <string name="screen_gestures_panel_summary">Szybkie ładowanie, Spectrum, Ambient display, KCAL</string>
+
+    <!-- Battery -->
+    <string name="battery_summary">Bateria</string>
+    <string name="fast_charge_title">USB Szybkie ładowanie</string>
+    <string name="fast_charge_summary">Włącz/Wyłącz USB szybkie ładowanie</string>
+    <string name="battery_cycle">Cykle baterii</string>
+    <string name="battery_temp">Temperatura baterii</string>
+    <string name="battery_health">Zdrowie baterii</string>
+
+    <!-- Display -->
+    <string name="graphics_title">Wyświetlacz</string>
+    <string name="dlm_mode_title">Tryb dzienny</string>
+
+    <!-- Kcal -->
+    <string name="kcal_title">Wyświetlane kolory</string>
+    <string name="kcal_summary">Dostosuj wyświetlane kolory używając KCAL</string>
+    <string name="kcal_enabled_title">Włącz KCAL</string>
+    <string name="kcal_enabled_summary">Włącz kalibracje ekranu wykorzystującą KCAL</string>
+    <string name="kcal_red">Czerwony</string>
+    <string name="kcal_green">Zielony</string>
+    <string name="kcal_blue">Niebieski</string>
+    <string name="kcal_saturation">Saturacja</string>
+    <string name="kcal_contrast">Kontrast</string>  
+    <string name="menu_reset">Reset</string>
+    <string name="kcal_color_temp">Temperatura barwowa (K)</string>
+
+    <!-- Spectrum Profiles -->
+    <string name="spectrum_title">Tryb pracy kernela</string>
+    <string name="spectrum_switch">Wyłącz profile kernela</string>
+
+    <string name="toast_restart">Zrestartuj telefon by zatwierdzić zmiany</string>
+</resources>

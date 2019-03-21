@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013-2014 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" translatable="false">LGE Settings</string>
+
+    <string name="screen_gestures_panel_title">Device Extras</string>
+    <string name="screen_gestures_panel_summary">USB Fast charge, Spectrum, Ambient display, KCAL</string>
+
+    <!-- Battery -->
+    <string name="battery_summary">Battery</string>
+    <string name="fast_charge_title">USB Fast charge</string>
+    <string name="fast_charge_summary">Enable/disable USB force fast charging</string>
+    <string name="battery_cycle">Battery cycle</string>
+    <string name="battery_temp">Battery temperature</string>
+    <string name="battery_health">Battery health</string>
+
+    <string name="toast_restart">Restart phone to apply changes</string>
+
+    <!-- Display -->
+    <string name="graphics_title">Display</string>
+    <string name="device_doze_title" translatable="false">Ambient display</string>
+
+    <string name="dlm_mode_title">Daylight mode</string>
+
+    <!-- Kcal -->
+    <string name="kcal_title">Display color</string>
+    <string name="kcal_summary">Display color calibration using KCAL</string>
+    <string name="kcal_enabled_title">Enable KCAL</string>
+    <string name="kcal_enabled_summary">Turn on display calibration using KCAL</string>
+    <string name="kcal_red">Red</string>
+    <string name="kcal_green">Green</string>
+    <string name="kcal_blue">Blue</string>
+    <string name="kcal_saturation">Saturation</string>
+    <string name="kcal_contrast">Contrast</string>
+    <string name="menu_reset">Reset</string>
+    <string name="kcal_color_temp">Color temperature (K)</string>
+
+    <!-- Spectrum Profiles -->
+    <string name="spectrum_category_title" translatable="false">Spectrum</string>
+    <string name="spectrum_title">Kernel Power Profile</string>
+    <string name="spectrum_summary" translatable="false">%1$s</string>
+    <string name="spectrum_switch">Disable kernel profiles</string>
+</resources>
