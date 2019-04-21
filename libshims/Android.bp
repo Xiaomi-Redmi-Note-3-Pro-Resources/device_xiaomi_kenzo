@@ -4,3 +4,10 @@ cc_library {
     shared_libs: ["libbase"],
     vendor: true
 }
+
+cc_library {
+    srcs: ["camera_stillmore.cpp"],
+    name: "libshim_stillmore",
+    shared_libs: ["libutils","libui"],
+    proprietary: true,
+}

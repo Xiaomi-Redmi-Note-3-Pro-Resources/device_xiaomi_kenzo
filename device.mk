@@ -427,7 +427,8 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 # Libshims
 PRODUCT_PACKAGES += \
-    libbase_shim
+    libbase_shim \
+    libshim_stillmore
 
 # Strip debug
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true

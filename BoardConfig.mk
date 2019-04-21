@@ -223,6 +223,10 @@ TARGET_USES_ALTERNATIVE_MANUAL_NETWORK_SELECT := true
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-minimal
 SELINUX_IGNORE_NEVERALLOWS := true
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /vendor/lib/libmmcamera_stillmore_lib.so|/vendor/lib/libshim_stillmore.so
+
 # Thermal
 USE_DEVICE_SPECIFIC_THERMAL := true
 
