@@ -211,6 +211,9 @@ PROTOBUF_SUPPORTED := true
 USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
 TARGET_USES_ALTERNATIVE_MANUAL_NETWORK_SELECT := true
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2018-07-01
+
 # SELinux
 #include device/qcom/sepolicy-legacy/sepolicy.mk
 #BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
