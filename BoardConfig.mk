@@ -89,7 +89,6 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
         /system/bin/mm-qcamera-daemon=23
 
 # Charger
-BOARD_CHARGER_ENABLE_SUSPEND := true
 WITH_CUSTOM_CHARGER := false
 
 

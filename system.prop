@@ -31,6 +31,9 @@ persist.vendor.audio.fluence.voicerec=false
 vendor.voice.voip.conc.disabled=true
 audio.offload.multiaac.enable=true
 
+# Charger
+ro.charger.enable_suspend=true
+
 # Dirac
 persist.dirac.acs.controller=qem
 persist.dirac.acs.storeSettings=1
