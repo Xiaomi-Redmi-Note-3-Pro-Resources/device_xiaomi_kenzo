@@ -74,6 +74,9 @@ media.stagefright.enable-scan=true
 ro.vendor.core_ctl_min_cpu=1
 ro.vendor.core_ctl_max_cpu=2
 
+# Charger
+ro.charger.enable_suspend=true
+
 # CNE/DPM
 persist.vendor.cne.feature=1
 persist.vendor.dpm.feature=1
