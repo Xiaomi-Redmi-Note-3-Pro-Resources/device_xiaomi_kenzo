@@ -68,6 +68,10 @@ function blob_fixup() {
         "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
         ;;
 
+    product/lib64/lib-imsvideocodec.so)
+        "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
+        ;;
+
     esac
 }
 

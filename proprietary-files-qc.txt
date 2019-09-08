@@ -491,7 +491,7 @@ vendor/lib64/libqsocket.so|3799e723be152c31c270f93a64e2865c0d9e86c4
 -product/app/uceShimService/uceShimService.apk|6e148658d03ffbfa6cbbebf18a85dba65799e1cf
 product/lib64/com.qualcomm.qti.imscmservice@1.0.so|db1f7abf26dfe1d13f7a7697ef5c7674bfea55d4
 product/lib64/lib-imscamera.so|644cd3e65e35fa7931fd6bd1eaf1f0c9a815c775
-product/lib64/lib-imsvideocodec.so|f49373b405d73645a6b9b4ce5734993275a88d25
+product/lib64/lib-imsvideocodec.so|96255ebab2c33e8d0a00ebee93bc9a7c487e4fea
 product/lib64/lib-imsvt.so|e06c778bdd9bc69f416381b29edd82cd7b7ee018
 product/lib64/lib-imsvtextutils.so|f272d94b74f9ef15ef55c83477862beaec58f20a
 product/lib64/lib-imsvtutils.so|70cea60a3f3819ed49640d6870b04e865ec527ba
