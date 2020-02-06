@@ -16,7 +16,7 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           android:sharedUserId="android.uid.system"
-          package="com.lge.settings.device"
+          package="com.magicxavi.settings.device"
           android:versionCode="6"
           android:versionName="2.4" >
 
@@ -34,7 +34,7 @@
 
         <provider
             android:name=".ConfigPanelSearchIndexablesProvider"
-            android:authorities="com.lge.settings.device"
+            android:authorities="com.magicxavi.settings.device"
             android:multiprocess="false"
             android:grantUriPermissions="true"
             android:permission="android.permission.READ_SEARCH_INDEXABLES"
@@ -61,7 +61,7 @@
         </activity>
 
         <activity
-            android:name="com.lge.settings.device.DisplayCalibration"
+            android:name="com.magicxavi.settings.device.DisplayCalibration"
             android:exported="true"
             android:label="@string/kcal_title">
             <intent-filter>
@@ -77,17 +77,6 @@
                 <action android:name="oneplus.intent.action.GESTURE_CAMERA" />
             </intent-filter>
         </receiver>
-
-        <service
-            android:name="com.lge.settings.device.DLMModeTileService"
-            android:icon="@drawable/ic_dlm_tile"
-            android:label="@string/dlm_mode_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
     </application>
 
 </manifest>

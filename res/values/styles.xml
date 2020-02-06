@@ -18,6 +18,7 @@
     <style name="SettingsTheme" parent="@android:style/Theme.DeviceDefault.Settings">
         <item name="android:switchPreferenceStyle">@style/SettingsSwitchPreference</item>
         <item name="android:checkBoxPreferenceStyle">@style/SettingsCheckBoxPreference</item>
+	<item name="android:editTextPreferenceStyle">@style/SettingsEditTextPreference</item>
         <item name="android:preferenceCategoryStyle">@style/SettingsPreferenceCategory</item>
         <item name="android:preferenceStyle">@style/SettingsPreference</item>
         <item name="android:dialogPreferenceStyle">@style/SettingsDialogPreference</item>
@@ -38,6 +39,11 @@
     </style>
 
     <style name="SettingsCheckBoxPreference" parent="@*android:style/Preference.DeviceDefault.CheckBoxPreference">
+        <item name="android:iconSpaceReserved">true</item>
+        <item name="android:singleLineTitle">false</item>
+    </style>
+
+    <style name="SettingsEditTextPreference" parent="@*android:style/Preference.DeviceDefault.DialogPreference.EditTextPreference">
         <item name="android:iconSpaceReserved">true</item>
         <item name="android:singleLineTitle">false</item>
     </style>

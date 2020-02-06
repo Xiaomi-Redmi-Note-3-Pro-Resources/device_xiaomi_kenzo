@@ -24,25 +24,26 @@
             android:title="@string/fast_charge_title"
             android:summary="@string/fast_charge_summary" />
 
-        <EditTextPreference
-            android:key="battery_cycle"
-            android:title="@string/battery_cycle"
-            android:summary="NULL"
-            android:enabled="false" />
+    </PreferenceCategory>
 
-        <EditTextPreference
-            android:key="battery_temp"
-            android:title="@string/battery_temp"
-            android:summary="NULL"
-            android:enabled="false" />
-
-        <EditTextPreference
-            android:key="battery_health"
-            android:title="@string/battery_health"
-            android:summary="NULL"
-            android:enabled="false" />
-
-
+    <PreferenceCategory
+        android:title="@string/category_vibrator" > 
+        <com.magicxavi.settings.device.VibratorStrengthPreference
+            android:key="vib_strength"
+            android:title="@string/vib_strength_title_head"
+            android:summary="@string/vib_strength_summary_head" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:title="@string/category_torch">
+        <com.magicxavi.settings.device.YellowTorchBrightnessPreference
+            android:key="yellow_torch_brightness"
+            android:title="@string/yellow_torch_brightness_title_head"
+            android:summary="@string/yellow_torch_brightness_summary_head"/> 
+        <com.magicxavi.settings.device.WhiteTorchBrightnessPreference
+            android:key="white_torch_brightness"
+            android:title="@string/white_torch_brightness_title_head"
+            android:summary="@string/white_torch_brightness_summary_head" />
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -74,8 +75,8 @@
             android:summary="@string/kcal_summary"
             android:persistent="false" >
             <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.lge.settings.device"
-                    android:targetClass="com.lge.settings.device.DisplayCalibration" />
+                    android:targetPackage="com.magicxavi.settings.device"
+                    android:targetClass="com.magicxavi.settings.device.DisplayCalibration" />
         </Preference>
 
         <Preference
@@ -87,9 +88,6 @@
                  android:targetClass="org.lineageos.settings.doze.DozeSettingsActivity"/>
         </Preference>
 
-        <SwitchPreference
-            android:key="dlm"
-            android:title="@string/dlm_mode_title" />
 
     </PreferenceCategory>
 

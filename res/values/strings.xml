@@ -15,26 +15,27 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name" translatable="false">LGE Settings</string>
+    <string name="app_name" translatable="false">AdvancedControls 2.0</string>
 
-    <string name="screen_gestures_panel_title">Device Extras</string>
-    <string name="screen_gestures_panel_summary">USB Fast charge, Spectrum, Ambient display, KCAL</string>
+    <string name="screen_gestures_panel_title">AdvancedControls 2.0</string>
+    <string name="screen_gestures_panel_summary">USB Fast charge, Spectrum, Vibration, Flashlight, KCAL</string>
+    <string name="category_vibrator">Vibrator</string>
+    <string name="vib_strength_title_head">Strength</string>
+    <string name="vib_strength_summary_head">Define the strength of the vibrator</string>
+    <string name="category_torch">Torch</string>
+    <string name="yellow_torch_brightness_title_head">Yellow led maximum brightness</string>
+    <string name="yellow_torch_brightness_summary_head">Define the maximum brightness of the yellow led</string>
+    <string name="white_torch_brightness_title_head">White led maximum brightness</string>
+    <string name="white_torch_brightness_summary_head">Define the maximum brightness of the white led</string>
 
     <!-- Battery -->
-    <string name="battery_summary">Battery</string>
     <string name="fast_charge_title">USB Fast charge</string>
     <string name="fast_charge_summary">Enable/disable USB force fast charging</string>
-    <string name="battery_cycle">Battery cycle</string>
-    <string name="battery_temp">Battery temperature</string>
-    <string name="battery_health">Battery health</string>
 
     <string name="toast_restart">Restart phone to apply changes</string>
 
     <!-- Display -->
     <string name="graphics_title">Display</string>
-    <string name="device_doze_title" translatable="false">Ambient display</string>
-
-    <string name="dlm_mode_title">Daylight mode</string>
 
     <!-- Kcal -->
     <string name="kcal_title">Display color</string>

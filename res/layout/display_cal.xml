@@ -16,10 +16,10 @@
             android:layout_width="match_parent"
             android:layout_height="232dp"
             android:src="@drawable/image1" />
-        <com.lge.settings.device.utils.NonScrollListView
+        <com.magicxavi.settings.device.utils.NonScrollListView
             android:id="@android:id/list"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        </com.lge.settings.device.utils.NonScrollListView>
+        </com.magicxavi.settings.device.utils.NonScrollListView>
     </LinearLayout>
 </ScrollView>
