@@ -36,7 +36,7 @@ import android.os.Handler;
 import android.os.Message;
 
 import com.magicxavi.settings.device.R;
-import com.magicxavi.settings.device.Utils;
+import com.magicxavi.settings.device.UtilsKCAL;
 
 public class SeekBarPreference extends Preference {
 
