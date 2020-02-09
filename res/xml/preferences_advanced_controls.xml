@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:key="usb"
+        android:title="@string/usb_fastcharge_title">
+
+        <com.magicxavi.settings.device.preferences.SecureSettingSwitchPreference
+            android:defaultValue="false"
+            android:key="usbfastcharge"
+            android:summary="@string/fastcharge_summary"
+            android:title="@string/fastcharge_title"
+            android:icon="@drawable/ic_usb" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="buttons"
+        android:title="@string/buttons_title">
+
+        <com.magicxavi.settings.device.preferences.SecureSettingSwitchPreference
+            android:defaultValue="false"
+            android:key="swapbuttons"
+            android:summary="@string/swapbuttons_summary"
+            android:title="@string/swapbuttons_title"
+            android:icon="@drawable/ic_swap" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="fp_options"
+        android:title="@string/fp_title">
+
+        <com.magicxavi.settings.device.preferences.SecureSettingSwitchPreference
+            android:defaultValue="false"
+            android:key="fpwakeup"
+            android:summary="@string/fp_wakeup_summary"
+            android:title="@string/fp_wakeup_title"
+            android:icon="@drawable/ic_fpwakeup" />
+
+        <com.magicxavi.settings.device.preferences.SecureSettingSwitchPreference
+            android:defaultValue="false"
+            android:key="fphome"
+            android:summary="@string/fp_home_summary"
+            android:title="@string/fp_home_title"
+            android:icon="@drawable/ic_fphome" />
+
+        <com.magicxavi.settings.device.preferences.SecureSettingSwitchPreference
+            android:defaultValue="false"
+            android:key="fppocket"
+            android:summary="@string/fp_pocketmode_summary"
+            android:title="@string/fp_pocketmode_title"
+            android:icon="@drawable/ic_fppocket" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="gestures"
+        android:title="@string/gestures_title">
+
+        <com.magicxavi.settings.device.preferences.SecureSettingSwitchPreference
+            android:defaultValue="false"
+            android:key="dt2w"
+            android:summary="@string/dt2w_summary"
+            android:title="@string/dt2w_title"
+            android:icon="@drawable/ic_dt2w" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="torch"
+        android:title="@string/torch_title">
+
+        <com.magicxavi.settings.device.preferences.SecureSettingCustomSeekBarPreference
+            android:defaultValue="100"
+            android:key="yellow_led"
+            android:max="200"
+            app:min="1"
+            android:title="@string/yellow_torch_brightness_title_head" />
+        <com.magicxavi.settings.device.preferences.SecureSettingCustomSeekBarPreference
+            android:defaultValue="100"
+            android:key="white_led"
+            android:max="200"
+            app:min="1"
+            android:title="@string/white_torch_brightness_title_head" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="vibration"
+        android:title="@string/vibration_title">
+
+        <com.magicxavi.settings.device.preferences.VibrationSeekBarPreference
+            android:defaultValue="80"
+            android:key="vibration_strength"
+            android:max="100"
+            android:title="@string/vibration_strength_title"
+            app:min="1"
+            app:units="%" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="display"
+        android:title="@string/display_title">
+
+        <Preference
+            android:key="device_kcal"
+            android:persistent="false"
+            android:summary="@string/device_kcal_suammary"
+            android:title="@string/device_kcal_title"
+            android:icon="@drawable/ic_color">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="org.lineageos.settings.kcal.KCalSettingsActivity"
+                android:targetPackage="org.lineageos.settings.kcal" />
+        </Preference>
+        
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="spectrum_profile"
+        android:title="@string/spectrum_profile_title">
+
+        <com.magicxavi.settings.device.preferences.SecureSettingListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/spectrum_dialogTitle"
+            android:entries="@array/spectrum_profiles"
+            android:entryValues="@array/spectrum_values"
+            android:key="spectrum"
+            android:summary="@string/spectrum_summary"
+            android:title="@string/spectrum_title"
+            android:icon="@drawable/ic_performance" />
+    </PreferenceCategory>
+</PreferenceScreen>
