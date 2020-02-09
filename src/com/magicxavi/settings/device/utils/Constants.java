@@ -34,21 +34,12 @@ public class Constants {
     public static final String NOTIF_SLIDER_MIDDLE_NODE = "/proc/tri-state-key/keyCode_middle";
     public static final String NOTIF_SLIDER_BOTTOM_NODE = "/proc/tri-state-key/keyCode_bottom";
 
-    // Spectrum modes
-    public static final String SPECTRUM_KEY = "spectrum";
-    public static final String SPECTRUM_SWITCH_KEY = "spectrum_switch";
-    public static final String SPECTRUM_SUPPORT_SYSTEM_PROPERTY  = "spectrum.support";
-    public static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
-
     // Holds <preference_key> -> <proc_node> mapping
     public static final Map<String, String> sBooleanNodePreferenceMap = new HashMap<>();
     public static final Map<String, String> sStringNodePreferenceMap = new HashMap<>();
 
     // Holds <preference_key> -> <default_values> mapping
     public static final Map<String, Object> sNodeDefaultMap = new HashMap<>();
-
-    // Preferences
-    public static final String PREF_SPECTRUM_ENABLED = "spectrum_enabled";
 
     public static boolean isPreferenceEnabled(Context context, String key) {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);

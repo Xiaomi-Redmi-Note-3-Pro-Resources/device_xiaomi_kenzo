@@ -27,6 +27,22 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="graphics"
+        android:title="@string/graphics_title">
+
+        <Preference
+            android:key="kcal"
+            android:title="@string/kcal_title"
+            android:summary="@string/kcal_summary"
+            android:persistent="false" >
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.magicxavi.settings.device"
+                    android:targetClass="com.magicxavi.settings.device.DisplayCalibration" />
+        </Preference>
+
+    </PreferenceCategory>
+
+   <PreferenceCategory
         android:title="@string/category_vibrator" > 
         <com.magicxavi.settings.device.VibratorStrengthPreference
             android:key="vib_strength"
@@ -44,41 +60,6 @@
             android:key="white_torch_brightness"
             android:title="@string/white_torch_brightness_title_head"
             android:summary="@string/white_torch_brightness_summary_head" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="spectrum_category"
-        android:title="@string/spectrum_category_title">
-
-        <SwitchPreference
-            android:key="spectrum_switch"
-            android:title="@string/spectrum_switch" />
-
-        <ListPreference
-            android:defaultValue="0"
-            android:entries="@array/spectrum_profiles"
-            android:entryValues="@array/spectrum_values"
-            android:key="spectrum"
-            android:summary="@string/spectrum_summary"
-            android:title="@string/spectrum_title" />
-
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="graphics"
-        android:title="@string/graphics_title">
-
-        <Preference
-            android:key="kcal"
-            android:title="@string/kcal_title"
-            android:summary="@string/kcal_summary"
-            android:persistent="false" >
-            <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.magicxavi.settings.device"
-                    android:targetClass="com.magicxavi.settings.device.DisplayCalibration" />
-        </Preference>
-
     </PreferenceCategory>
 
 </PreferenceScreen>

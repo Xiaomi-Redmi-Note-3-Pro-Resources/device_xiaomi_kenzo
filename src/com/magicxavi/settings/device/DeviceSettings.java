@@ -33,19 +33,14 @@ import android.widget.Toast;
 
 import com.magicxavi.settings.device.utils.Constants;
 import com.magicxavi.settings.device.utils.NodePreferenceActivity;
-import com.magicxavi.settings.device.utils.PreferenceHelper;
 
 public class DeviceSettings extends NodePreferenceActivity {
 
-    private static final String SPECTRUM_CATEGORY_KEY = "spectrum_category";
     public static final String KEY_VIBSTRENGTH = "vib_strength";
     public static final String KEY_YELLOW_TORCH_BRIGHTNESS = "yellow_torch_brightness";
     public static final String KEY_WHITE_TORCH_BRIGHTNESS = "white_torch_brightness";
 
     private SwitchPreference mFCSwitch;
-    private ListPreference mSpectrum;
-    private PreferenceCategory mSpectrumCategory;
-    private SwitchPreference mSpectrumSwitch;
     private VibratorStrengthPreference mVibratorStrength;
     private YellowTorchBrightnessPreference mYellowTorchBrightness;
     private WhiteTorchBrightnessPreference mWhiteTorchBrightness;
@@ -78,51 +73,6 @@ public class DeviceSettings extends NodePreferenceActivity {
         if (mWhiteTorchBrightness != null) {
             mWhiteTorchBrightness.setEnabled(WhiteTorchBrightnessPreference.isSupported());
         }
-
-        mSpectrumSwitch = (SwitchPreference) findPreference(Constants.SPECTRUM_SWITCH_KEY);
-        mSpectrumSwitch.setEnabled(true);
-        mSpectrumSwitch.setChecked(!PreferenceHelper.isSpectrumEnabled(getApplicationContext()));
-        mSpectrumSwitch.setOnPreferenceChangeListener(this);
-
-        mSpectrum = (ListPreference) findPreference(Constants.SPECTRUM_KEY);
-        if( mSpectrum != null ) {
-            mSpectrum.setEnabled(PreferenceHelper.isSpectrumEnabled(getApplicationContext()));
-            mSpectrum.setValue(SystemProperties.get(Constants.SPECTRUM_SYSTEM_PROPERTY, "0"));
-            mSpectrum.setOnPreferenceChangeListener(this);
-        }
-
-        mSpectrumCategory = (PreferenceCategory) findPreference(SPECTRUM_CATEGORY_KEY);
-        if (!getResources().getBoolean(R.bool.device_supports_spectrum)) {
-            getPreferenceScreen().removePreference(mSpectrumCategory);
-        }
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        final String key = preference.getKey();
-        if (Constants.SPECTRUM_KEY.equals(key) && PreferenceHelper.isSpectrumEnabled(getApplicationContext())) {
-            String strvalue = (String) newValue;
-            SystemProperties.set(Constants.SPECTRUM_SYSTEM_PROPERTY, strvalue);
-            return true;
-        } else if(Constants.SPECTRUM_SWITCH_KEY.equals(key)) {
-            Boolean enabled = (Boolean) newValue;
-            if(enabled) {
-                SystemProperties.set(Constants.SPECTRUM_SYSTEM_PROPERTY, "");
-                SystemProperties.set(Constants.SPECTRUM_SUPPORT_SYSTEM_PROPERTY, "0");
-                PreferenceHelper.setSpectrumEnabled(getApplicationContext(), false);
-                mSpectrum.setEnabled(false);
-            } else {
-                SystemProperties.set(Constants.SPECTRUM_SYSTEM_PROPERTY, "0");
-                SystemProperties.set(Constants.SPECTRUM_SUPPORT_SYSTEM_PROPERTY, "1");
-                mSpectrum.setEnabled(true);
-                PreferenceHelper.setSpectrumEnabled(getApplicationContext(), true);
-            }
-
-            Toast.makeText(getApplicationContext(), getString(R.string.toast_restart), Toast.LENGTH_LONG).show();
-
-            return true;
-        }
-        return super.onPreferenceChange(preference, newValue);
     }
 
     @Override

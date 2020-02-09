@@ -31,7 +31,6 @@ import java.io.File;
 
 import com.magicxavi.settings.device.utils.Constants;
 import com.magicxavi.settings.device.utils.FileUtils;
-import com.magicxavi.settings.device.utils.PreferenceHelper;
 
 public class Startup extends BroadcastReceiver {
 
@@ -59,8 +58,6 @@ public class Startup extends BroadcastReceiver {
         if (Intent.ACTION_BOOT_COMPLETED.equals(action)
                 || Intent.ACTION_PRE_BOOT_COMPLETED.equals(action)) {
             enableComponent(context, DeviceSettings.class.getName());
-
-            if(PreferenceHelper.isSpectrumEnabled(context)) { SystemProperties.set(Constants.SPECTRUM_SUPPORT_SYSTEM_PROPERTY, "1"); }
         }
 
         DisplayCalibration.restore(context);
