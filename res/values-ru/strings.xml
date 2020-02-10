@@ -21,10 +21,6 @@
     <string name="fp_title">Настройки сканера отпечатков</string>
     <string name="fp_wakeup_title">Сканер будит устройство</string>
     <string name="fp_wakeup_summary">Пробуждать устройство сканером когда дисплей выключен</string>
-    <string name="fp_home_title">Сканер отпечатков как кнопка</string>
-    <string name="fp_home_summary">Сканер отпечатков работает как кнопка Домой</string>
-	<string name="fp_pocketmode_title">Сканер отпечатков в кармане</string>
-	<string name="fp_pocketmode_summary">Отключить сканер отпечатков в кармане</string>
 
     <!-- Gestures -->
     <string name="gestures_title">Жесты</string>

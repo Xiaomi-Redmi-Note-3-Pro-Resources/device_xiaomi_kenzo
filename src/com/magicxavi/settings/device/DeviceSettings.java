@@ -19,13 +19,7 @@ public class DeviceSettings extends PreferenceFragment implements
     // Fingerprint options
     private static final String CATEGORY_FINGERPRINT_OPTIONS = "fp_options";
     public static final String PREF_FPWAKEUP = "fpwakeup";
-    public static final String FPWAKEUP_PATH = "/sys/devices/soc.0/fpc_fpc1020/enable_wakeup";
-    private static final String CATEGORY_FP_HOME = "fp_home";
-    public static final String PREF_FPHOME = "fphome";
-    public static final String FPHOME_PATH = "/sys/devices/soc.0/fpc_fpc1020/enable_key_events";
-    private static final String CATEGORY_FP_POCKET = "fp_pocket";
-    public static final String PREF_FPPOCKET = "fppocket";
-    public static final String FPPOCKET_PATH = "/sys/devices/soc.0/fpc_fpc1020/proximity_state";
+    public static final String FPWAKEUP_PATH = "/sys/devices/soc.0/fpc_fpc1020.110/enable_wakeup";
 
     // Navbar
     public static final String PREF_ENABLE_NAVBAR = "navbar";
@@ -159,16 +153,6 @@ public class DeviceSettings extends PreferenceFragment implements
             SecureSettingSwitchPreference fpwakeup = (SecureSettingSwitchPreference) findPreference(PREF_FPWAKEUP);
             fpwakeup.setChecked(FileUtils.getFileValueAsBoolean(FPWAKEUP_PATH, false));
             fpwakeup.setOnPreferenceChangeListener(this);
-
-            FileUtils.fileWritable(FPHOME_PATH);
-            SecureSettingSwitchPreference fphome = (SecureSettingSwitchPreference) findPreference(PREF_FPHOME);
-            fphome.setChecked(FileUtils.getFileValueAsBoolean(FPHOME_PATH, false));
-            fphome.setOnPreferenceChangeListener(this);
-        
-            FileUtils.fileWritable(FPPOCKET_PATH);
-            SecureSettingSwitchPreference fppocket = (SecureSettingSwitchPreference) findPreference(PREF_FPPOCKET);
-            fppocket.setChecked(FileUtils.getFileValueAsBoolean(FPPOCKET_PATH, false));
-            fppocket.setOnPreferenceChangeListener(this);
         } else {
             getPreferenceScreen().removePreference(findPreference(CATEGORY_FINGERPRINT_OPTIONS));
         }
@@ -248,14 +232,6 @@ public class DeviceSettings extends PreferenceFragment implements
 
             case PREF_FPWAKEUP:
                 FileUtils.setValue(FPWAKEUP_PATH, (boolean) value);
-                break;
-
-            case PREF_FPHOME:
-                FileUtils.setValue(FPHOME_PATH, (boolean) value);
-                break;
-
-            case PREF_FPPOCKET:
-                FileUtils.setValue(FPPOCKET_PATH, (boolean) value);
                 break;
 
             case PREF_DT2W:
