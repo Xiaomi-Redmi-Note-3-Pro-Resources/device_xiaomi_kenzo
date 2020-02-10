@@ -19,11 +19,6 @@
     <string name="advanced_settings">Recursos do dispositivo</string>
     <string name="advanced_settings_summary">Recursos específicos do dispositivo</string>
 
-    <!-- Buttons -->
-    <string name="buttons_title">Botões</string>
-    <string name="swapbuttons_title">Inverter botões</string>
-    <string name="swapbuttons_summary">Inverter a ordem dos botões recentes e voltar</string>
-
 	<!-- Fingerprint options -->
     <string name="fp_title">Impressão digital</string>
     <string name="fp_wakeup_title">Ligar tela com impressão digital</string>
@@ -45,7 +40,6 @@
 
 	<!-- Torch -->
     <string name="torch_title">Flash</string>
-    <string name="torch_brightness_title">Brilho</string>
 
     <!-- Display -->
     <string name="display_title">Tela</string>
@@ -53,10 +47,6 @@
     <!-- KCal -->
     <string name="device_kcal_title">Cor da tela</string>
     <string name="device_kcal_suammary">Calibração da tela usando KCAL</string>
-
-    <!-- Ambient Display -->
-    <string name="ambient_display_xiaomi">Xiaomi Doze</string>
-    <string name="advanced_doze_summary">Tela ambiente</string>
 
     <string name="vibration_title">Feedback tátil</string>
     <string name="vibration_strength_title">Força</string>
@@ -72,7 +62,6 @@
     <string name="spectrum_battery">Bateria</string>
     <string name="spectrum_gaming">Gaming</string>
     <string name="spectrum_balance">Balanceado</string>
-    <string name="spectrum_extreme_battery">Economia extrema</string>
 
     <!-- kcal -->
     <string name="advanced_settings_kcal">Calibração de cores da tela</string>

@@ -19,11 +19,6 @@
     <string name="advanced_settings">Cihaz Ayarları</string>
     <string name="advanced_settings_summary">Cihaza özel ayarlar</string>
 
-    <!-- Buttons -->
-    <string name="buttons_title">Butonlar</string>
-    <string name="swapbuttons_title">Butonların yerlerini değiştir</string>
-    <string name="swapbuttons_summary">Son uygulamalar ve geri butonlarının yerlerini değiştir</string>
-
 	<!-- Fingerprint options -->
     <string name="fp_title">Parmak izi ayarları</string>
     <string name="fp_wakeup_title">Parmak izi cihazı uyandırır</string>
@@ -45,7 +40,6 @@
 
 	<!-- Torch -->
     <string name="torch_title">El feneri</string>
-    <string name="torch_brightness_title">Parlaklık</string>
 
     <!-- Display -->
     <string name="display_title">Ekran</string>
@@ -53,10 +47,6 @@
     <!-- KCal -->
     <string name="device_kcal_title">Ekran Rengi</string>
     <string name="device_kcal_suammary">KCAL ile renk kalibrasyonu</string>
-
-    <!-- Ambient Display -->
-    <string name="ambient_display_xiaomi">Xiaomi Doze</string>
-    <string name="advanced_doze_summary">Ortam Ekranı</string>
 
     <string name="vibration_title">Dokunuşsal geri bildirim</string>
     <string name="vibration_strength_title">Güç</string>
@@ -72,7 +62,6 @@
     <string name="spectrum_battery">Güç Tasarrufu</string>
     <string name="spectrum_gaming">Oyun</string>
     <string name="spectrum_balance">Dengeli</string>
-    <string name="spectrum_extreme_battery">Ekstra Güç Tasarrufu</string>
 
     <!-- kcal -->
     <string name="advanced_settings_kcal">Ekran Renk Kalibrasyonu</string>

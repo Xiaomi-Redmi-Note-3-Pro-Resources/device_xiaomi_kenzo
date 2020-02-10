@@ -81,13 +81,6 @@
     <string name="dirac_preset_dance">Танцевальная</string>
     <string name="dirac_preset_metal">Металл</string>
 
-    <!-- Values for Thermal Presets -->
-    <string name="thermal_performance">Производительность</string>
-    <string name="thermal_battery">Энергосбережение</string>
-    <string name="thermal_gaming">Игры</string>
-    <string name="thermal_balance">Баланс</string>
-    <string name="thermal_extreme_battery">Экстримное энергосбережение</string>
-
 	<!-- Torch -->
     <string name="torch_title">Светодиод</string>
     <string name="yellow_torch_brightness_title_head">Желтый</string>
@@ -114,7 +107,6 @@
     <string name="spectrum_battery">Энергосбережение</string>
     <string name="spectrum_gaming">Гейминг</string>
     <string name="spectrum_balance">Баланс</string>
-    <string name="spectrum_extreme_battery">Сильное Энергосбережение</string>
 
         <!-- Navbar Profiles -->
     <string name="navbar_profile_title">Навигация</string>

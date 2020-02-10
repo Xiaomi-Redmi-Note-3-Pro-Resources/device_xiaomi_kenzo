@@ -19,11 +19,6 @@
     <string name="advanced_settings">ویژگی های دستگاه</string>
     <string name="advanced_settings_summary">ویژگی های مخصوص دستگاه</string>
 
-    <!-- Buttons -->
-    <string name="buttons_title">دکمه ها</string>
-    <string name="swapbuttons_title">جا به جایی دکمه ها</string>
-    <string name="swapbuttons_summary">عوض کردن جای دکمه بازگشت و برنامه های باز</string>
-
 	<!-- Fingerprint options -->
     <string name="fp_title">تنظیمات اثر انگشت</string>
     <string name="fp_wakeup_title">بیدار کردن دستگاه با اثر انگشت</string>
@@ -45,7 +40,6 @@
 
 	<!-- Torch -->
     <string name="torch_title">چراغ قوه</string>
-    <string name="torch_brightness_title">نور چراغ قوه</string>
 
     <!-- Display -->
     <string name="display_title">صفحه نمایش</string>
@@ -53,10 +47,6 @@
     <!-- KCal -->
     <string name="device_kcal_title">رنگ های صفحه نمایش</string>
     <string name="device_kcal_suammary">کالیبره کردن رنگ های صفحه نمایش</string>
-
-    <!-- Ambient Display -->
-    <string name="ambient_display_xiaomi">نمایشگر محیط</string>
-    <string name="advanced_doze_summary">محافظ صفحه نمایش</string>
 
     <string name="vibration_title">تنظیم لرزش دستگاه</string>
     <string name="vibration_strength_title">لرزش</string>
@@ -72,7 +62,6 @@
     <string name="spectrum_battery">ذخیره باتری</string>
     <string name="spectrum_gaming">بازی</string>
     <string name="spectrum_balance">عادی</string>
-    <string name="spectrum_extreme_battery">ذخیره بیشتر باتری</string>
 
     <!-- kcal -->
     <string name="advanced_settings_kcal">کالیبره کردن رنگ های صفحه نمایش</string>

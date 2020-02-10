@@ -109,7 +109,6 @@
     <string name="spectrum_battery">Battery</string>
     <string name="spectrum_gaming">Gaming</string>
     <string name="spectrum_balance">Balance</string>
-    <string name="spectrum_extreme_battery">Extreme Battery</string>
 
     <!-- Navbar Profiles -->
     <string name="navbar_profile_title">Navigation</string>
