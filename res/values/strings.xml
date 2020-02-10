@@ -39,9 +39,10 @@
     <string name="dt2w_summary">Double tap on screen wake device</string>
 
     <!-- USB Fastcharge -->
-    <string name="usb_fastcharge_title">USB Fastcharge</string>
+    <string name="usb_fastcharge_title">Power</string>
     <string name="fastcharge_title">Enable USB Fastcharge</string>
     <string name="fastcharge_summary">Use fastcharge when connected to a computer via usb port</string>
+    <string name="qc_limit_summary">Set limit for your charger per Ma</string>
 
 	<!-- Torch -->
     <string name="torch_title">Torch</string>

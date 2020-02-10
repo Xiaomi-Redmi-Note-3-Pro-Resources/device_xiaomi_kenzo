@@ -37,6 +37,9 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                     PREF_HUE, HUE_DEFAULT));
         }
 
+        FileUtils.setValue(DeviceSettings.QC_LIMIT_PATH, Settings.Secure.getInt(
+        context.getContentResolver(), DeviceSettings.PREF_QC_LIMIT, 2000) / 2500.0 * (DeviceSettings.MAX_QC - DeviceSettings.MIN_QC) + DeviceSettings.MIN_QC);
+
         int gain = Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_HEADPHONE_GAIN, 4);
         FileUtils.setValue(DeviceSettings.HEADPHONE_GAIN_PATH, gain + " " + gain);
