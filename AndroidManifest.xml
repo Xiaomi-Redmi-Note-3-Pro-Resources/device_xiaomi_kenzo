@@ -91,6 +91,11 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+
+        <service
+            android:name=".DiracService"
+            android:enabled="true"
+            android:stopWithTask="false" />
         
     </application>
 </manifest>
