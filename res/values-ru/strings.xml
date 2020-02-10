@@ -17,11 +17,6 @@
     <string name="advanced_settings">AdvancedControls 2</string>
     <string name="advanced_settings_summary">Настройки устройства</string>
 
-    <!-- Buttons -->
-    <string name="buttons_title">Кнопки</string>
-    <string name="swapbuttons_title">Поменять кнопки местами</string>
-    <string name="swapbuttons_summary">Меняетместами кнопки Недавних и Назад</string>
-
 	<!-- Fingerprint options -->
     <string name="fp_title">Настройки сканера отпечатков</string>
     <string name="fp_wakeup_title">Сканер будит устройство</string>

@@ -19,11 +19,6 @@
     <string name="advanced_settings">AdvancedControls 2</string>
     <string name="advanced_settings_summary">Device specific features</string>
 
-    <!-- Buttons -->
-    <string name="buttons_title">Buttons</string>
-    <string name="swapbuttons_title">Swap buttons</string>
-    <string name="swapbuttons_summary">Swap the order of recents and back buttons</string>
-
 	<!-- Fingerprint options -->
     <string name="fp_title">Fingerprint options</string>
     <string name="fp_wakeup_title">Fingerprint wakes device</string>

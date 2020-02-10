@@ -23,18 +23,6 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="buttons"
-        android:title="@string/buttons_title">
-
-        <com.magicxavi.settings.device.preferences.SecureSettingSwitchPreference
-            android:defaultValue="false"
-            android:key="swapbuttons"
-            android:summary="@string/swapbuttons_summary"
-            android:title="@string/swapbuttons_title"
-            android:icon="@drawable/ic_swap" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="fp_options"
         android:title="@string/fp_title">
 

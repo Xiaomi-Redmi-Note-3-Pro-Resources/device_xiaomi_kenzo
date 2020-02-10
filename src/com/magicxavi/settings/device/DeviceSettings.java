@@ -16,11 +16,6 @@ import com.magicxavi.settings.device.preferences.VibrationSeekBarPreference;
 public class DeviceSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-    // Buttons
-    private static final String CATEGORY_BUTTONS = "buttons";
-    public static final String PREF_SWAP_BUTTONS = "swapbuttons";
-    public static final String SWAP_BUTTONS_PATH = "/proc/touchpanel/reversed_keys_enable";
-
     // Fingerprint options
     private static final String CATEGORY_FINGERPRINT_OPTIONS = "fp_options";
     public static final String PREF_FPWAKEUP = "fpwakeup";
@@ -149,13 +144,6 @@ public class DeviceSettings extends PreferenceFragment implements
         SecureSettingListPreference preset = (SecureSettingListPreference) findPreference(PREF_PRESET);
         preset.setOnPreferenceChangeListener(this);
 
-        if (FileUtils.fileWritable(SWAP_BUTTONS_PATH)) {
-            SecureSettingSwitchPreference swapbuttons = (SecureSettingSwitchPreference) findPreference(PREF_SWAP_BUTTONS);
-            swapbuttons.setChecked(FileUtils.getFileValueAsBoolean(SWAP_BUTTONS_PATH, false));
-            swapbuttons.setOnPreferenceChangeListener(this);
-        } else {
-            getPreferenceScreen().removePreference(findPreference(CATEGORY_BUTTONS));
-        }
 
         if (FileUtils.fileWritable(FPWAKEUP_PATH)) {
             SecureSettingSwitchPreference fpwakeup = (SecureSettingSwitchPreference) findPreference(PREF_FPWAKEUP);
@@ -240,10 +228,6 @@ public class DeviceSettings extends PreferenceFragment implements
                 mSPECTRUM.setValue((String) value);
                 mSPECTRUM.setSummary(mSPECTRUM.getEntry());
                 FileUtils.setStringProp(SPECTRUM_SYSTEM_PROPERTY, (String) value);
-                break;
-
-            case PREF_SWAP_BUTTONS:
-                FileUtils.setValue(SWAP_BUTTONS_PATH, (boolean) value);
                 break;
 
             case PREF_FPWAKEUP:
