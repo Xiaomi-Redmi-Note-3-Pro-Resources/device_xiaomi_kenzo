@@ -64,6 +64,12 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final int MIN_VIBRATION = 116;
     public static final int MAX_VIBRATION = 3596;
 
+    // Audio
+    public static final String PREF_HEADPHONE_GAIN = "headphone_gain";
+    public static final String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
+    public static final String PREF_MICROPHONE_GAIN = "microphone_gain";
+    public static final String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
+
     // Spectrum
     public static final String PREF_SPECTRUM = "spectrum";
     public static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
@@ -83,6 +89,12 @@ public class DeviceSettings extends PreferenceFragment implements
         SecureSettingCustomSeekBarPreference TorchBrightness2 = (SecureSettingCustomSeekBarPreference) findPreference(PREF_TORCH_BRIGHTNESS_2);
         TorchBrightness2.setEnabled(FileUtils.fileWritable(TORCH_2_BRIGHTNESS_PATH));
         TorchBrightness2.setOnPreferenceChangeListener(this);
+
+        SecureSettingCustomSeekBarPreference HeadphoneGain = (SecureSettingCustomSeekBarPreference) findPreference(PREF_HEADPHONE_GAIN);
+        HeadphoneGain.setOnPreferenceChangeListener(this);
+
+        SecureSettingCustomSeekBarPreference MicrophoneGain = (SecureSettingCustomSeekBarPreference) findPreference(PREF_MICROPHONE_GAIN);
+        MicrophoneGain.setOnPreferenceChangeListener(this);
 
         VibrationSeekBarPreference vibrationStrength = (VibrationSeekBarPreference) findPreference(PREF_VIBRATION_STRENGTH);
         vibrationStrength.setEnabled(FileUtils.fileWritable(VIBRATION_STRENGTH_PATH));
@@ -240,6 +252,14 @@ public class DeviceSettings extends PreferenceFragment implements
 
             case PREF_USB_FASTCHARGE:
                 FileUtils.setValue(USB_FASTCHARGE_PATH, (boolean) value);
+                break;
+
+            case PREF_HEADPHONE_GAIN:
+                FileUtils.setValue(HEADPHONE_GAIN_PATH, value + " " + value);
+                break;
+
+            case PREF_MICROPHONE_GAIN:
+                FileUtils.setValue(MICROPHONE_GAIN_PATH, (int) value);
                 break;
 
             default:

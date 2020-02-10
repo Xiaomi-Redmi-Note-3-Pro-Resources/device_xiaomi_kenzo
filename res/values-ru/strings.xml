@@ -41,6 +41,9 @@
     <string name="fastcharge_title">Включить USB Быструю зарядку</string>
     <string name="fastcharge_summary">Использовать быструю зарядку при аодключении к USB</string>
 
+    <!-- Audio amplification -->
+    <string name="headphone_gain">Усиление наушников</string>
+    <string name="microphone_gain">Усиление микрофона</string>
     <string name="audio_title">Аудио</string>
 
     <!-- Dirac settings -->

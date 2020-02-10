@@ -51,7 +51,10 @@
     <!-- Display -->
     <string name="display_title">Display</string>
 
-        <string name="audio_title">Audio</string>
+    <!-- Audio amplification -->
+    <string name="headphone_gain">Headphone gain</string>
+    <string name="microphone_gain">Microphone gain</string>
+    <string name="audio_title">Audio</string>
 
     <!-- Dirac settings -->
     <string name="dirac_title">Mi Sound Enhancer</string>
