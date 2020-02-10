@@ -27,6 +27,10 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String PREF_FPPOCKET = "fppocket";
     public static final String FPPOCKET_PATH = "/sys/devices/soc/soc:fpc_fpc1020/proximity_state";
 
+    // Navbar
+    public static final String PREF_ENABLE_NAVBAR = "navbar";
+    public static final String NAVBAR_SYSTEM_PROPERTY = "qemu.hw.mainkeys";
+
     // Dirac
     private static final String PREF_ENABLE_DIRAC = "dirac_enabled";
     private static final String PREF_HEADSET = "dirac_headset_pref";
@@ -78,6 +82,7 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final int MAX_QC = 2500000;
 
     private SecureSettingListPreference mSPECTRUM;
+    private SecureSettingListPreference mNAVBAR;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -106,6 +111,11 @@ public class DeviceSettings extends PreferenceFragment implements
         VibrationSeekBarPreference vibrationStrength = (VibrationSeekBarPreference) findPreference(PREF_VIBRATION_STRENGTH);
         vibrationStrength.setEnabled(FileUtils.fileWritable(VIBRATION_STRENGTH_PATH));
         vibrationStrength.setOnPreferenceChangeListener(this);
+
+        mNAVBAR = (SecureSettingListPreference) findPreference(PREF_ENABLE_NAVBAR);
+        mNAVBAR.setValue(FileUtils.getStringProp(NAVBAR_SYSTEM_PROPERTY, "1"));
+        mNAVBAR.setSummary(mNAVBAR.getEntry());
+        mNAVBAR.setOnPreferenceChangeListener(this);
 
         Preference kcal = findPreference(PREF_DEVICE_KCAL);
 
@@ -228,6 +238,12 @@ public class DeviceSettings extends PreferenceFragment implements
                 mSPECTRUM.setValue((String) value);
                 mSPECTRUM.setSummary(mSPECTRUM.getEntry());
                 FileUtils.setStringProp(SPECTRUM_SYSTEM_PROPERTY, (String) value);
+                break;
+
+            case PREF_ENABLE_NAVBAR:
+                mNAVBAR.setValue((String) value);
+                mNAVBAR.setSummary(mNAVBAR.getEntry());
+                FileUtils.setStringProp(NAVBAR_SYSTEM_PROPERTY, (String) value);
                 break;
 
             case PREF_FPWAKEUP:

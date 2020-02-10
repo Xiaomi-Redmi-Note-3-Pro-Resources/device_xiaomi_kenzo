@@ -49,6 +49,21 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="navbar_profile"
+        android:title="@string/navbar_profile_title">
+
+        <com.magicxavi.settings.device.preferences.SecureSettingListPreference
+            android:defaultValue="1"
+            android:dialogTitle="@string/navbar_dialogTitle"
+            android:entries="@array/navbar_profiles"
+            android:entryValues="@array/navbar_values"
+            android:key="navbar"
+            android:summary="@string/navbar_summary"
+            android:title="@string/navbar_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="gestures"
         android:title="@string/gestures_title">
 
