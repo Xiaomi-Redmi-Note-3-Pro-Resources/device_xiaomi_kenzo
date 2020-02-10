@@ -31,7 +31,7 @@ public class KeyHandler implements DeviceKeyHandler {
 
     private static final String TAG = KeyHandler.class.getSimpleName();
 
-    private static final String FP_HOME_NODE = "/sys/devices/soc/soc:fpc_fpc1020/enable_key_events";
+    private static final String FP_HOME_NODE = "/sys/devices/soc.0/fpc_fpc1020/enable_key_events";
 
     private static boolean sScreenTurnedOn = true;
     private static final boolean DEBUG = false;
