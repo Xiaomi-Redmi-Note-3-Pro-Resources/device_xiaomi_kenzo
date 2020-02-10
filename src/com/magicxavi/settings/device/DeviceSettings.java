@@ -68,6 +68,7 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
 
     // QC limit
+    private static final String CATEGORY_QC= "qc";
     public static final String PREF_QC_LIMIT = "qc_limit";
     public static final String QC_LIMIT_PATH = "/sys/devices/soc.0/qpnp-smbcharger-16/power_supply/battery/constant_charge_current_max";
 
@@ -98,9 +99,13 @@ public class DeviceSettings extends PreferenceFragment implements
         SecureSettingCustomSeekBarPreference MicrophoneGain = (SecureSettingCustomSeekBarPreference) findPreference(PREF_MICROPHONE_GAIN);
         MicrophoneGain.setOnPreferenceChangeListener(this);
 
+        if (FileUtils.fileWritable(QC_LIMIT_PATH)) {
         SecureSettingCustomSeekBarPreference QuickCharge = (SecureSettingCustomSeekBarPreference) findPreference(PREF_QC_LIMIT);
         QuickCharge.setEnabled(FileUtils.fileWritable(QC_LIMIT_PATH));
         QuickCharge.setOnPreferenceChangeListener(this);
+        } else {
+            getPreferenceScreen().removePreference(findPreference(CATEGORY_QC));
+        }
 
         VibrationSeekBarPreference vibrationStrength = (VibrationSeekBarPreference) findPreference(PREF_VIBRATION_STRENGTH);
         vibrationStrength.setEnabled(FileUtils.fileWritable(VIBRATION_STRENGTH_PATH));
@@ -251,7 +256,7 @@ public class DeviceSettings extends PreferenceFragment implements
                 break;
 
             case PREF_QC_LIMIT:
-                double quickchargeValue = (int) value / 2500.0 * (MAX_QC - MIN_QC) + MIN_QC;
+                double quickchargeValue = (int) value / 2000.0 * (MAX_QC - MIN_QC) + MIN_QC;
                 FileUtils.setValue(QC_LIMIT_PATH, quickchargeValue);
                 break;
 

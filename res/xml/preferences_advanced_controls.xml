@@ -13,6 +13,12 @@
             android:title="@string/fastcharge_title"
             android:icon="@drawable/ic_usb" />
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="qc"
+        android:title="@string/usb_fastcharge_title">
+
         <com.magicxavi.settings.device.preferences.SecureSettingCustomSeekBarPreference
             android:defaultValue="2000"
             android:key="qc_limit"
