@@ -19,7 +19,7 @@ public class DeviceSettings extends PreferenceFragment implements
     // Fingerprint options
     private static final String CATEGORY_FINGERPRINT_OPTIONS = "fp_options";
     public static final String PREF_FPWAKEUP = "fpwakeup";
-    public static final String FPWAKEUP_PATH = "/sys/devices/soc.0/fpc_fpc1020.110/enable_wakeup";
+    public static final String FPWAKEUP_PATH = "/sys/devices/soc.0/fpc_fpc1020.110/wakeup_enable";
 
     // Navbar
     public static final String PREF_ENABLE_NAVBAR = "navbar";
