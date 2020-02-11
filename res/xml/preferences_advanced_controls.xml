@@ -99,17 +99,19 @@
             android:icon="@drawable/ic_preset" />
 
         <com.magicxavi.settings.device.preferences.SecureSettingCustomSeekBarPreference
-            android:defaultValue="4"
+            android:defaultValue="0"
             android:key="headphone_gain"
-            android:max="15"
+            android:max="20"
             app:min="-40"
+            android:icon="@drawable/ic_headphone"
             android:title="@string/headphone_gain" />
 
         <com.magicxavi.settings.device.preferences.SecureSettingCustomSeekBarPreference
-            android:defaultValue="0"
+            android:defaultValue="3"
             android:key="microphone_gain"
-            android:max="15"
+            android:max="20"
             app:min="-10"
+            android:icon="@drawable/ic_mic"
             android:title="@string/microphone_gain" />
     </PreferenceCategory>
 
@@ -122,12 +124,14 @@
             android:key="yellow_led"
             android:max="200"
             app:min="1"
+            android:icon="@drawable/ic_torch"
             android:title="@string/yellow_torch_brightness_title_head" />
         <com.magicxavi.settings.device.preferences.SecureSettingCustomSeekBarPreference
             android:defaultValue="100"
             android:key="white_led"
             android:max="200"
             app:min="1"
+            android:icon="@drawable/ic_torch"
             android:title="@string/white_torch_brightness_title_head" />
 
     </PreferenceCategory>
@@ -157,8 +161,8 @@
             android:icon="@drawable/ic_color">
             <intent
                 android:action="android.intent.action.MAIN"
-                android:targetClass="org.lineageos.settings.kcal.KCalSettingsActivity"
-                android:targetPackage="org.lineageos.settings.kcal" />
+                android:targetClass="com.magicxavi.settings.device.kcal.KCalSettingsActivity"
+                android:targetPackage="com.magicxavi.settings.device.kcal" />
         </Preference>
         
     </PreferenceCategory>

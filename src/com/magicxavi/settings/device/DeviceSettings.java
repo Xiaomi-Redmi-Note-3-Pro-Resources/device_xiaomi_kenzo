@@ -58,10 +58,10 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final int MAX_VIBRATION = 3596;
 
     // Audio
-    public static final String PREF_HEADPHONE_GAIN = "headphone_gain";
-    public static final String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
-    public static final String PREF_MICROPHONE_GAIN = "microphone_gain";
-    public static final String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
+    public static final  String PREF_HEADPHONE_GAIN = "headphone_gain";
+    public static final  String PREF_MICROPHONE_GAIN = "microphone_gain";
+    public static final  String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
+    public static final  String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
 
     // Spectrum
     public static final String PREF_SPECTRUM = "spectrum";
@@ -78,6 +78,8 @@ public class DeviceSettings extends PreferenceFragment implements
 
     private SecureSettingListPreference mSPECTRUM;
     private SecureSettingListPreference mNAVBAR;
+    private SecureSettingCustomSeekBarPreference mHeadphoneGain;
+    private SecureSettingCustomSeekBarPreference mMicrophoneGain;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -93,11 +95,11 @@ public class DeviceSettings extends PreferenceFragment implements
         TorchBrightness2.setEnabled(FileUtils.fileWritable(TORCH_2_BRIGHTNESS_PATH));
         TorchBrightness2.setOnPreferenceChangeListener(this);
 
-        SecureSettingCustomSeekBarPreference HeadphoneGain = (SecureSettingCustomSeekBarPreference) findPreference(PREF_HEADPHONE_GAIN);
-        HeadphoneGain.setOnPreferenceChangeListener(this);
+        mHeadphoneGain = (SecureSettingCustomSeekBarPreference) findPreference(PREF_HEADPHONE_GAIN);
+        mHeadphoneGain.setOnPreferenceChangeListener(this);
 
-        SecureSettingCustomSeekBarPreference MicrophoneGain = (SecureSettingCustomSeekBarPreference) findPreference(PREF_MICROPHONE_GAIN);
-        MicrophoneGain.setOnPreferenceChangeListener(this);
+        mMicrophoneGain = (SecureSettingCustomSeekBarPreference) findPreference(PREF_MICROPHONE_GAIN);
+        mMicrophoneGain.setOnPreferenceChangeListener(this);
 
         if (FileUtils.fileWritable(QC_LIMIT_PATH)) {
         SecureSettingCustomSeekBarPreference QuickCharge = (SecureSettingCustomSeekBarPreference) findPreference(PREF_QC_LIMIT);
