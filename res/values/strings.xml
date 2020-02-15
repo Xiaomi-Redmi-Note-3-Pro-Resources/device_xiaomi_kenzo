@@ -110,16 +110,6 @@
     <string name="spectrum_gaming">Gaming</string>
     <string name="spectrum_balance">Balance</string>
 
-    <!-- Navbar Profiles -->
-    <string name="navbar_profile_title">Navigation</string>
-    <string name="navbar_title">Navigation Bar</string>
-    <string name="navbar_summary">Navigation Bar settings</string>
-    <string name="navbar_dialogTitle">Enable or Disable Navbar (reboot required)</string>
-
-    <!-- Values for Navbar -->
-    <string name="navbar_enabled">Enable Navbar</string>
-    <string name="navbar_disabled">Disable Navbar</string>
-
     <!-- kcal -->
     <string name="advanced_settings_kcal">Display Color Calibration</string>
     <string name="cat_colormanagement">Color Settings</string>
