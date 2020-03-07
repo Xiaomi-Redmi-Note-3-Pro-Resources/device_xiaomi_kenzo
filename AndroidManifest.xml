@@ -80,6 +80,8 @@
             </intent-filter>
         </activity>
 
+        <service android:name=".StartAction" />
+
         <service
             android:name=".PerformanceTileService"
             android:icon="@drawable/spectrum_balance"
