@@ -30,7 +30,7 @@
     <!-- USB Fastcharge -->
     <string name="usb_fastcharge_title">Питание</string>
     <string name="fastcharge_title">Включить USB Быструю зарядку</string>
-    <string name="fastcharge_summary">Использовать быструю зарядку при аодключении к USB</string>
+    <string name="fastcharge_summary">Использовать быструю зарядку при подключении к USB</string>
     <string name="qc_limit_summary">Установить лимит зарядки в mA</string>
 
     <!-- Audio amplification -->
