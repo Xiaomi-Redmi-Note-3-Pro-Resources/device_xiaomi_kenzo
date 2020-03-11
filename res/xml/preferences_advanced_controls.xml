@@ -24,7 +24,6 @@
             android:key="qc_limit"
             android:max="2500"
             app:min="1000"
-            app:units="%"
             android:title="@string/qc_limit_summary" />
     </PreferenceCategory>
 
