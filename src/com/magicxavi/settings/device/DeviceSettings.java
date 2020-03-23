@@ -64,9 +64,9 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
 
     // QC limit
-    private static final String CATEGORY_QC= "qc";
-    public static final String PREF_QC_LIMIT = "qc_limit";
-    public static final String QC_LIMIT_PATH = "/sys/devices/soc.0/qpnp-smbcharger-16/power_supply/battery/constant_charge_current_max";
+    //private static final String CATEGORY_QC= "qc";
+    //public static final String PREF_QC_LIMIT = "qc_limit";
+    //public static final String QC_LIMIT_PATH = "/sys/devices/soc.0/qpnp-smbcharger-16/power_supply/battery/constant_charge_current_max";
 
     private SecureSettingListPreference mSPECTRUM;
     private SecureSettingCustomSeekBarPreference mHeadphoneGain;
@@ -92,13 +92,13 @@ public class DeviceSettings extends PreferenceFragment implements
         mMicrophoneGain = (SecureSettingCustomSeekBarPreference) findPreference(PREF_MICROPHONE_GAIN);
         mMicrophoneGain.setOnPreferenceChangeListener(this);
 
-        if (FileUtils.fileWritable(QC_LIMIT_PATH)) {
-        SecureSettingCustomSeekBarPreference QuickCharge = (SecureSettingCustomSeekBarPreference) findPreference(PREF_QC_LIMIT);
-        QuickCharge.setEnabled(FileUtils.fileWritable(QC_LIMIT_PATH));
-        QuickCharge.setOnPreferenceChangeListener(this);
-        } else {
-            getPreferenceScreen().removePreference(findPreference(CATEGORY_QC));
-        }
+        //if (FileUtils.fileWritable(QC_LIMIT_PATH)) {
+        //SecureSettingCustomSeekBarPreference QuickCharge = (SecureSettingCustomSeekBarPreference) findPreference(PREF_QC_LIMIT);
+        //QuickCharge.setEnabled(FileUtils.fileWritable(QC_LIMIT_PATH));
+        //QuickCharge.setOnPreferenceChangeListener(this);
+        //} else {
+        //    getPreferenceScreen().removePreference(findPreference(CATEGORY_QC));
+        //}
 
         VibrationSeekBarPreference vibrationStrength = (VibrationSeekBarPreference) findPreference(PREF_VIBRATION_STRENGTH);
         vibrationStrength.setEnabled(FileUtils.fileWritable(VIBRATION_STRENGTH_PATH));
@@ -237,10 +237,10 @@ public class DeviceSettings extends PreferenceFragment implements
                 FileUtils.setValue(MICROPHONE_GAIN_PATH, (int) value);
                 break;
 
-            case PREF_QC_LIMIT:
-                double quickchargeValue = (int) value * 1000.0;
-                FileUtils.setValue(QC_LIMIT_PATH, quickchargeValue);
-                break;
+            //case PREF_QC_LIMIT:
+            //    double quickchargeValue = (int) value * 1000.0;
+            //    FileUtils.setValue(QC_LIMIT_PATH, quickchargeValue);
+            //    break;
 
             default:
                 break;

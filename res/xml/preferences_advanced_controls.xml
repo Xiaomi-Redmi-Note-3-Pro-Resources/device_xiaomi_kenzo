@@ -15,7 +15,7 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
+    <!--<PreferenceCategory
         android:key="qc"
         android:title="@string/usb_fastcharge_title">
 
@@ -25,7 +25,7 @@
             android:max="2500"
             app:min="1000"
             android:title="@string/qc_limit_summary" />
-    </PreferenceCategory>
+    </PreferenceCategory>-->
 
     <PreferenceCategory
         android:key="fp_options"
