@@ -68,10 +68,6 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String PREF_QC_LIMIT = "qc_limit";
     public static final String QC_LIMIT_PATH = "/sys/devices/soc.0/qpnp-smbcharger-16/power_supply/battery/constant_charge_current_max";
 
-    // qc_limit min and max value
-    public static final int MIN_QC = 1000000;
-    public static final int MAX_QC = 2500000;
-
     private SecureSettingListPreference mSPECTRUM;
     private SecureSettingCustomSeekBarPreference mHeadphoneGain;
     private SecureSettingCustomSeekBarPreference mMicrophoneGain;
@@ -242,7 +238,7 @@ public class DeviceSettings extends PreferenceFragment implements
                 break;
 
             case PREF_QC_LIMIT:
-                double quickchargeValue = (int) value / 2000.0 * (MAX_QC - MIN_QC) + MIN_QC;
+                double quickchargeValue = (int) value * 1000.0;
                 FileUtils.setValue(QC_LIMIT_PATH, quickchargeValue);
                 break;
 
