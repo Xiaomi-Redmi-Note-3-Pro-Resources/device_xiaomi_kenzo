@@ -4,3 +4,12 @@ cc_library {
     shared_libs: ["libbase"],
     vendor: true
 }
+
+cc_library_shared {
+    name: "libui_shim",
+
+    srcs: ["GraphicBuffer.cpp"],
+    shared_libs: ["libui"],
+
+    compile_multilib: "64",
+}
