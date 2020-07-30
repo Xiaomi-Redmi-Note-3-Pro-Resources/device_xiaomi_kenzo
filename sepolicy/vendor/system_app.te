@@ -33,3 +33,7 @@ allow system_app fm_radio_device:chr_file r_file_perms;
 allow system_app sysfs_vibrator:file { write getattr open read };
 
 allow system_app default_prop:property_service { set };
+
+# BatteryHealth
+allow system_app sysfs_battery_supply:dir search;
+allow system_app sysfs_battery_supply:file r_file_perms;
