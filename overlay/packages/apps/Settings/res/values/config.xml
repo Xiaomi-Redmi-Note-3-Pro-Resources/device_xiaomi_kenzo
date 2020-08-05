@@ -20,4 +20,10 @@
     <!-- Whether notify user that switch data service -->
     <bool name="confirm_to_switch_data_service">true</bool>
 
+    <!-- Sets the paths that are needed for Battery Health Info-->
+    <string name="config_batDesCap">/sys/class/power_supply/bms/charge_full</string>
+    <string name="config_batCurCap">/sys/class/power_supply/bms/charge_now_raw</string>
+    <string name="config_batChargeCycle">/sys/class/power_supply/bms/cycle_count</string>
+    <bool   name="config_supportBatteryHealth">true</bool>
+
 </resources>
