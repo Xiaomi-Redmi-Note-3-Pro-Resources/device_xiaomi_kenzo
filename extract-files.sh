@@ -58,6 +58,10 @@ function blob_fixup() {
         vendor/lib64/libwvhidl.so)
             patchelf --replace-needed libprotobuf-cpp-lite.so libprotobuf-cpp-lite-v29.so "${2}"
             ;;
+        product/lib64/libdpmframework.so)
+        # Use libcutils-v29.so for libdpmframework.so
+            sed -i "s/libhidltransport.so/libcutils-v29.so\x00\x00\x00/" "${2}"
+            ;;
     esac
 }
 
