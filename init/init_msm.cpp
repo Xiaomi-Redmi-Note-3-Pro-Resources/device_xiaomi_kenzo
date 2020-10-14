@@ -26,12 +26,14 @@
  */
 
 #include <sys/sysinfo.h>
-
 #include <cstdio>
 
 #include <android-base/file.h>
 #include <android-base/properties.h>
 #include <android-base/strings.h>
+
+#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <sys/_system_properties.h>
 
 #include "property_service.h"
 #include "vendor_init.h"
@@ -39,7 +41,10 @@
 using android::base::GetProperty;
 using android::base::ReadFileToString;
 using android::base::Trim;
-using android::init::property_set;
+
+int property_set(const char *key, const char *value) {
+    return __system_property_set(key, value);
+}
 
 char const *heapstartsize;
 char const *heapgrowthlimit;
