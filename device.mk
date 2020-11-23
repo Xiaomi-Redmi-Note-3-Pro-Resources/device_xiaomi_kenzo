@@ -448,23 +448,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# TextClassifier smart selection model files
-PRODUCT_PACKAGES += \
-    textclassifier.bundle1 \
-    textclassifier.ar.model \
-    textclassifier.de.model \
-    textclassifier.en.model \
-    textclassifier.es.model \
-    textclassifier.fr.model \
-    textclassifier.it.model \
-    textclassifier.nl.model \
-    textclassifier.pl.model \
-    textclassifier.pt.model \
-    textclassifier.ru.model \
-    textclassifier.tr.model \
-    textclassifier.zh.model \
-    textclassifier.zh-Hant.model
-
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
