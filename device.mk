@@ -88,7 +88,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.soundtrigger@2.2-impl \
-    android.hardware.soundtrigger@2.2-service \
     audio.primary.msm8952 \
     audio.r_submix.default \
     audio.usb.default \
@@ -176,7 +175,6 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libqdMetaData \
     libqdMetaData.system \
-    libgenlock \
     vendor.display.config@1.0 \
     vendor.display.config@1.0_vendor
 
@@ -264,12 +262,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
-# IPv6
-PRODUCT_PACKAGES += \
-    ebtables \
-    ethertypes \
-    libebtc
-
 # IRQ
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance_little_big.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance_little_big.conf
@@ -308,7 +300,6 @@ PRODUCT_PACKAGES += \
     libOmxAmrEnc \
     libOmxCore \
     libOmxEvrcEnc \
-    libOmxG711Enc \
     libOmxQcelp13Enc \
     libOmxSwVencHevc \
     libOmxVdec \
@@ -453,8 +444,7 @@ PRODUCT_PACKAGES += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@1.0-service \
-    thermal.msm8952
+    android.hardware.thermal@1.0-service
 
 # USB HAL
 PRODUCT_PACKAGES += \
