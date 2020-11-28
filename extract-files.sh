@@ -62,6 +62,10 @@ function blob_fixup() {
         # Use libcutils-v29.so for libdpmframework.so
             sed -i "s/libhidltransport.so/libcutils-v29.so\x00\x00\x00/" "${2}"
             ;;
+        # Patch DRM blob to resolve moved symbol
+        vendor/lib64/libsettings.so)
+            patchelf --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v29.so" "${2}"
+            ;;
     esac
 }
 
