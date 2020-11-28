@@ -185,7 +185,7 @@ vendor/lib64/libssd.so
 # DRM (Widevine) - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.18.0.QDLMIXM
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine|e130b8f1c8d46d8a185b00cba5ff8a2a871ee94c
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|dee5b7838ac561a2292e89fc0c4ccd1932224215
-vendor/lib64/libwvhidl.so|72ebe6aa5c8f5a681979423149896b3d2201d974
+vendor/lib64/libwvhidl.so|9720fa37d6bfe685ee2d8752f7760a950ba2aef1
 
 # Energy awareness
 vendor/bin/energy-awareness
