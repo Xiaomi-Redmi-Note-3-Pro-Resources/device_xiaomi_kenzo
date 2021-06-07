@@ -52,3 +52,6 @@ BUILD_FINGERPRINT=Xiaomi/kenzo/kenzo:6.0.1/MMB29M/V8.2.1.0.MHOCNDL:user/release-
 # Advanced Controls
 PRODUCT_PACKAGES += \
     AdvancedControls
+
+# Time
+LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
