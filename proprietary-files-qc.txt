@@ -366,6 +366,33 @@ vendor/lib64/libmm-color-convertor.so|d3539eb5a6a986f8ba81bac9cbf7b34872b12f1a
 -vendor/lib/libgpustats.so|75fc8f58b071f3c27d708010e1b40eafba091a14
 -vendor/lib64/libgpustats.so|a899ae72983277442cdacf8f43271986c91ce710
 
+# Perf
+-app/workloadclassifier/workloadclassifier.apk
+-framework/QPerformance.jar
+-framework/UxPerformance.jar
+bin/perfservice
+etc/init/perfservice.rc
+etc/perf/wlc_model.tflite
+etc/permissions/com.qualcomm.qti.Performance.xml
+etc/permissions/com.qualcomm.qti.UxPerformance.xml
+lib/libdolphin.so
+lib/libqti-at.so
+lib/libqti-iopd-client_system.so
+lib/libqti-perfd-client_system.so
+lib/libqti-util_system.so
+lib/libqti_performance.so
+lib64/libdolphin.so
+lib64/libqti-at.so
+lib64/libqti-iopd-client_system.so
+lib64/libqti-perfd-client_system.so
+lib64/libqti-util_system.so
+lib64/libqti_performance.so
+lib64/libqti_workloadclassifiermodel.so
+product/lib/vendor.qti.hardware.iop@2.0.so
+product/lib/vendor.qti.hardware.perf@2.0.so
+product/lib64/vendor.qti.hardware.iop@2.0.so
+product/lib64/vendor.qti.hardware.perf@2.0.so
+
 # Peripheral manager - from daisy - xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.18.0.QDLMIXM
 vendor/bin/pm-proxy|1f216a6f54e9b97c026f3f3bc4d7d441d58d90a7
 vendor/bin/pm-service|8a521f14576d0d2edf03b4500a54379d37e15d4e
