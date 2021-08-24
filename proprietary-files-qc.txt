@@ -491,7 +491,6 @@ vendor/lib64/libril-qc-qmi-1.so|c3c2e8d01a35574bd116551d793baa1a7cc6e25d
 vendor/lib64/libril-qc-radioconfig.so|709a1ea2451c1d73e3ec10e71bbf94a032e5e07d
 vendor/lib64/libril-qcril-hook-oem.so|2e318f760743cd840161a3cdd740af14df0ea5c1
 vendor/lib64/librilqmiservices.so|f9aa60b9e3ff1af7cff48f45c1b344e02d264f5c
-vendor/lib64/libsettings.so|f16d6db7e4bf2f991dcbc5f62b23d2e309f15e4a
 vendor/lib64/libsystem_health_mon.so|c93728503ca53ecadbb3bc5495f2b52a1843c320
 vendor/lib64/vendor.qti.hardware.radio.am@1.0_vendor.so|318c76800318990d796094e6d636cff11a3c6197
 vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0_vendor.so|25be983eef69d449c3082c6071b9b2b859241240
@@ -503,6 +502,9 @@ vendor/lib64/vendor.qti.hardware.radio.uim@1.0_vendor.so|64197ede9adbe084239f997
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0_vendor.so|7df497d269152ea31c154903db60640496619e98
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so|f0f52576763dafcb528650dd5b4e937a0db54626
 vendor/radio/qcril_database/qcril.db|4df6c832d5c99d2760b7602d100dd2d3ac9954e6
+
+# RIL - from patched libra vendor tree
+vendor/lib64/libsettings.so|b8c91a63c0e7b013ac48bb16bc4e8ce8ec6f3f07
 
 # RIL - from daisy - xiaomi/daisy/daisy_sprout:9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ
 vendor/bin/rmt_storage|346ef281e829109ba11af912509309e520351ef9
