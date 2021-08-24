@@ -42,8 +42,15 @@ using android::base::GetProperty;
 using android::base::ReadFileToString;
 using android::base::Trim;
 
-int property_set(const char *key, const char *value) {
-    return __system_property_set(key, value);
+void property_override(char const prop[], char const value[], bool add = true) {
+    prop_info *pi;
+
+    pi = (prop_info *)__system_property_find(prop);
+
+    if (pi)
+        __system_property_update(pi, value, strlen(value));
+    else if (add)
+        __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
 char const *heapstartsize;
@@ -64,14 +71,14 @@ void check_device()
         heapgrowthlimit = "288m";
         heapsize = "768m";
         heapminfree = "512k";
-		heapmaxfree = "8m";
+        heapmaxfree = "8m";
     } else {
         // from - phone-xxhdpi-2048-dalvik-heap.mk
         heapstartsize = "16m";
         heapgrowthlimit = "192m";
         heapsize = "512m";
         heapminfree = "2m";
-		heapmaxfree = "8m";
+        heapmaxfree = "8m";
     }
 }
 
@@ -101,9 +108,9 @@ static void init_alarm_boot_properties()
          */
         if ((Trim(boot_reason) == "3" || reboot_reason == "true")
                 && Trim(power_off_alarm) == "1")
-            property_set("ro.alarm_boot", "true");
+            property_override("ro.alarm_boot", "true");
         else
-            property_set("ro.alarm_boot", "false");
+            property_override("ro.alarm_boot", "false");
     }
 }
 
@@ -112,10 +119,10 @@ void vendor_load_properties()
     init_alarm_boot_properties();
     check_device();
 
-    property_set("dalvik.vm.heapstartsize", heapstartsize);
-    property_set("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
-    property_set("dalvik.vm.heapsize", heapsize);
-    property_set("dalvik.vm.heaptargetutilization", "0.75");
-    property_set("dalvik.vm.heapminfree", heapminfree);
-    property_set("dalvik.vm.heapmaxfree", heapmaxfree);
+    property_override("dalvik.vm.heapstartsize", heapstartsize);
+    property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
+    property_override("dalvik.vm.heapsize", heapsize);
+    property_override("dalvik.vm.heaptargetutilization", "0.75");
+    property_override("dalvik.vm.heapminfree", heapminfree);
+    property_override("dalvik.vm.heapmaxfree", heapmaxfree);
 }
