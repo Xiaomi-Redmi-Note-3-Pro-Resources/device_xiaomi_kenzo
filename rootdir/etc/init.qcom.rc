@@ -28,15 +28,12 @@
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.safailnet.rc
-import /vendor/etc/init/hw/init.spectrum.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
     chown root system /dev/kmsg
     chmod 0620 /dev/kmsg
-    # Enable sched boost
-    write /proc/sys/kernel/sched_boost 1
   
 on init
     # Configure Zram
@@ -131,30 +128,6 @@ on boot
 
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/device/extldo
     chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
-
-    # Kcal permissions
-    chown root system /sys/devices/platform/kcal_ctrl.0/kcal
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal
-    chown root system /sys/devices/platform/kcal_ctrl.0/kcal_min
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_min
-    chown root system /sys/devices/platform/kcal_ctrl.0/kcal_sat
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_sat
-    chown root system /sys/devices/platform/kcal_ctrl.0/kcal_hue
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_hue
-    chown root system /sys/devices/platform/kcal_ctrl.0/kcal_val
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_val
-    chown root system /sys/devices/platform/kcal_ctrl.0/kcal_cont
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_cont
-
-    # AdvancedControls
-    chown root system /sys/kernel/sound_control/headphone_gain
-    chmod 0660 /sys/kernel/sound_control/headphone_gain
-    chown root system /sys/kernel/sound_control/mic_gain
-    chmod 0660 /sys/kernel/sound_control/mic_gain
-    chown root system /sys/devices/soc.0/qpnp-smbcharger-16/power_supply/battery/constant_charge_current_max
-    chmod 0660 /sys/devices/soc.0/qpnp-smbcharger-16/power_supply/battery/constant_charge_current_max
-    chown root system /sys/devices/virtual/timed_output/vibrator/vtg_level
-    chmod 0660 /sys/devices/virtual/timed_output/vibrator/vtg_level
 
     #Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 0770 radio radio
