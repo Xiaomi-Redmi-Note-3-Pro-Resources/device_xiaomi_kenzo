@@ -35,6 +35,12 @@ adj_series=`cat /sys/module/lowmemorykiller/parameters/adj`
 adj_1="${adj_series#*,}"
 set_almk_ppr_adj="${adj_1%%,*}"
 
+if [ -f /sys/devices/soc0/soc_id ]; then
+    soc_id=`cat /sys/devices/soc0/soc_id`
+else
+    soc_id=`cat /sys/devices/system/soc/soc0/id`
+fi
+
 # PPR and ALMK should not act on HOME adj and below.
 # Normalized ADJ for HOME is 6. Hence multiply by 6
 # ADJ score represented as INT in LMK params, actual score can be in decimal
@@ -88,6 +94,12 @@ vmpres_file_min=$((minfree_5 + (minfree_5 - rem_minfree_4)))
 echo $vmpres_file_min > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
 echo 0 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
 
+if [ $MemTotal -le 2097152 ]; then
+#Enable B service adj transition for 2GB or less memory
+    setprop ro.vendor.qti.sys.fw.bservice_enable true
+    setprop ro.vendor.qti.sys.fw.bservice_limit 5
+    setprop ro.vendor.qti.sys.fw.bservice_age 5000
+fi
 
 chown -h system /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
 chown -h system /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
@@ -97,6 +109,11 @@ chown -h system /sys/devices/platform/rs300000a7.65536/force_sync
 chown -h system /sys/devices/platform/rs300000a7.65536/sync_sts
 chown -h system /sys/devices/platform/rs300100a7.65536/force_sync
 chown -h system /sys/devices/platform/rs300100a7.65536/sync_sts
+
+echo 128 > /sys/block/mmcblk0/bdi/read_ahead_kb
+echo 128 > /sys/block/mmcblk0/queue/read_ahead_kb
+echo 128 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
+echo 128 > /sys/block/mmcblk0rpmb/queue/read_ahead_kb
 
 setprop sys.post_boot.parsed 1
 setprop vendor.post_boot.parsed 1
@@ -108,7 +125,7 @@ else
     panel=${panel:2:4}
 fi
 
-# Apply Scheduler and Governor settings for 8976
+# Apply Scheduler and Governor settings for 8956 / 8976
 # SoC IDs are 266, 274, 277, 278
 # HMP scheduler (big.Little cluster related) settings
 echo 95 > /proc/sys/kernel/sched_upmigrate
@@ -121,8 +138,11 @@ echo 3 > /sys/devices/system/cpu/cpu2/sched_mostly_idle_nr_run
 echo 3 > /sys/devices/system/cpu/cpu3/sched_mostly_idle_nr_run
 echo 3 > /sys/devices/system/cpu/cpu4/sched_mostly_idle_nr_run
 echo 3 > /sys/devices/system/cpu/cpu5/sched_mostly_idle_nr_run
-#echo 3 > /sys/devices/system/cpu/cpu6/sched_mostly_idle_nr_run
-#echo 3 > /sys/devices/system/cpu/cpu7/sched_mostly_idle_nr_run
+
+if [ "$soc_id" == "278" ]; then
+    echo 3 > /sys/devices/system/cpu/cpu6/sched_mostly_idle_nr_run
+    echo 3 > /sys/devices/system/cpu/cpu7/sched_mostly_idle_nr_run
+fi
 
 for devfreq_gov in /sys/class/devfreq/*qcom,mincpubw*/governor
 do
@@ -169,11 +189,15 @@ echo 40000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
 echo 40000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/sampling_down_factor
 echo 400000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 echo 60000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis
+
+echo 59000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay
+echo 1305600 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
+echo "691200:60 806400:80" > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
 echo 1382400 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
 echo "19000 1382400:39000" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
 echo "85 1382400:90 1747200:80" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
 
-# HMP Task packing settings for 8976
+# HMP Task packing settings for 8956 / 8976
 echo 30 > /proc/sys/kernel/sched_small_task
 echo 20 > /sys/devices/system/cpu/cpu0/sched_mostly_idle_load
 echo 20 > /sys/devices/system/cpu/cpu1/sched_mostly_idle_load
@@ -181,8 +205,14 @@ echo 20 > /sys/devices/system/cpu/cpu2/sched_mostly_idle_load
 echo 20 > /sys/devices/system/cpu/cpu3/sched_mostly_idle_load
 echo 20 > /sys/devices/system/cpu/cpu4/sched_mostly_idle_load
 echo 20 > /sys/devices/system/cpu/cpu5/sched_mostly_idle_load
-#echo 20 > /sys/devices/system/cpu/cpu6/sched_mostly_idle_load
-#echo 20 > /sys/devices/system/cpu/cpu7/sched_mostly_idle_load
+
+if [ "$soc_id" == "278" ]; then
+    echo 20 > /sys/devices/system/cpu/cpu6/sched_mostly_idle_load
+    echo 20 > /sys/devices/system/cpu/cpu7/sched_mostly_idle_load
+fi
+
+# Disable sched boost
+echo 0 > /proc/sys/kernel/sched_boost
 
 # Bring up all cores online
 echo 1 > /sys/devices/system/cpu/cpu1/online
@@ -190,8 +220,6 @@ echo 1 > /sys/devices/system/cpu/cpu2/online
 echo 1 > /sys/devices/system/cpu/cpu3/online
 echo 1 > /sys/devices/system/cpu/cpu4/online
 echo 1 > /sys/devices/system/cpu/cpu5/online
-#echo 1 > /sys/devices/system/cpu/cpu6/online
-#echo 1 > /sys/devices/system/cpu/cpu7/online
 
 # Enable LPM Prediction
 echo 1 > /sys/module/lpm_levels/parameters/lpm_prediction
@@ -210,7 +238,7 @@ if [ `cat /sys/devices/soc0/revision` == "1.0" ]; then
     echo N > /sys/module/lpm_levels/system/a72/a72-l2-pc/idle_enabled
 fi
 
-# Disable L2 GDHS on 8976
+# Disable L2 GDHS on 8956 / 8976
 echo N > /sys/module/lpm_levels/system/a53/a53-l2-gdhs/idle_enabled
 echo N > /sys/module/lpm_levels/system/a72/a72-l2-gdhs/idle_enabled
 
@@ -233,6 +261,13 @@ echo 130 > /proc/sys/kernel/sched_grp_upmigrate
 echo 110 > /proc/sys/kernel/sched_grp_downmigrate
 echo   1 > /proc/sys/kernel/sched_enable_thread_grouping
 
+echo > /proc/sys/kernel/sched_upmigrate_min_nice 9
+
+echo "cpufreq" > /sys/class/devfreq/soc:qcom,mincpubw/governor
+echo "bw_hwmon" > /sys/class/devfreq/soc:qcom,cpubw/governor
+echo 20 > /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/io_percent
+echo 30 > /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/guard_band_mbps
+
 # Enable Fingerprint Boost
 echo 1 > /sys/kernel/fp_boost/enabled
 
@@ -246,3 +281,14 @@ setprop sys.io.scheduler "cfq"
 
 # Set Sound Control parameters after boot
 echo 5 > /sys/kernel/sound_control/speaker_gain
+
+if [ "$soc_id" == "278" ]; then
+    echo "0-2,4-7" > /dev/cpuset/foreground/cpus
+    echo "4-7" > /dev/cpuset/foreground/boost/cpus
+    echo "0" > /dev/cpuset/background/cpus
+    echo "0-5" > /dev/cpuset/restricted/cpus
+    echo "0-2" > /dev/cpuset/system-background/cpus
+    echo "0-7" > /dev/cpuset/top-app/cpus
+    echo 1 > /sys/devices/system/cpu/cpu6/online
+    echo 1 > /sys/devices/system/cpu/cpu7/online
+fi
