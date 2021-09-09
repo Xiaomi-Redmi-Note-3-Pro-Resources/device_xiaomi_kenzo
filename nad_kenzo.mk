@@ -24,7 +24,7 @@ $(call inherit-product, device/xiaomi/kenzo/device.mk)
 $(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
 NAD_BUILD_TYPE := OFFICIAL
 TARGET_USES_BLUR := true
-
+USE_AOSP_CLOCK := true
 
 # Set those variables here to overwrite the inherited values.
 BOARD_VENDOR := Xiaomi
