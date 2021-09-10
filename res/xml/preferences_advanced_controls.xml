@@ -43,12 +43,12 @@
         android:key="gestures"
         android:title="@string/gestures_title">
 
-        <com.magicxavi.settings.device.preferences.SecureSettingSwitchPreference
+        <!--<com.magicxavi.settings.device.preferences.SecureSettingSwitchPreference
             android:defaultValue="false"
             android:key="dt2w"
             android:summary="@string/dt2w_summary"
             android:title="@string/dt2w_title"
-            android:icon="@drawable/ic_dt2w" />
+            android:icon="@drawable/ic_dt2w" />-->
             
         <com.magicxavi.settings.device.preferences.SecureSettingCustomSeekBarPreference
             android:defaultValue="40"

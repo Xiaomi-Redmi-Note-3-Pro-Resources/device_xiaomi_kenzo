@@ -28,8 +28,8 @@ public class DeviceSettings extends PreferenceFragment implements
 
     // Gestures
     private static final String CATEGORY_GESTURES= "gestures";
-    public static final String PREF_DT2W = "dt2w";
-    public static final String DT2W_PATH = "/sys/android_touch/doubletap2wake";
+    //public static final String PREF_DT2W = "dt2w";
+    //public static final String DT2W_PATH = "/sys/android_touch/doubletap2wake";
 
     private static final String CATEGORY_DISPLAY = "display";
     private static final String PREF_DEVICE_KCAL = "device_kcal";
@@ -158,13 +158,13 @@ public class DeviceSettings extends PreferenceFragment implements
             getPreferenceScreen().removePreference(findPreference(CATEGORY_FINGERPRINT_OPTIONS));
         }
 
-        if (FileUtils.fileWritable(DT2W_PATH)) {
-            SecureSettingSwitchPreference dt2w = (SecureSettingSwitchPreference) findPreference(PREF_DT2W);
-            dt2w.setChecked(FileUtils.getFileValueAsBoolean(DT2W_PATH, false));
-            dt2w.setOnPreferenceChangeListener(this);
-        } else {
-            getPreferenceScreen().removePreference(findPreference(CATEGORY_GESTURES));
-        }
+        //if (FileUtils.fileWritable(DT2W_PATH)) {
+        //    SecureSettingSwitchPreference dt2w = (SecureSettingSwitchPreference) findPreference(PREF_DT2W);
+        //    dt2w.setChecked(FileUtils.getFileValueAsBoolean(DT2W_PATH, false));
+        //    dt2w.setOnPreferenceChangeListener(this);
+        //} else {
+        //    getPreferenceScreen().removePreference(findPreference(CATEGORY_GESTURES));
+        //}
 
         if (FileUtils.fileWritable(USB_FASTCHARGE_PATH)) {
             SecureSettingSwitchPreference usbfastcharge = (SecureSettingSwitchPreference) findPreference(PREF_USB_FASTCHARGE);
@@ -233,9 +233,9 @@ public class DeviceSettings extends PreferenceFragment implements
                 FileUtils.setValue(FPWAKEUP_PATH, (boolean) value);
                 break;
 
-            case PREF_DT2W:
-                FileUtils.setValue(DT2W_PATH, (boolean) value);
-                break;
+            //case PREF_DT2W:
+            //    FileUtils.setValue(DT2W_PATH, (boolean) value);
+            //    break;
 
             case PREF_USB_FASTCHARGE:
                 FileUtils.setValue(USB_FASTCHARGE_PATH, (boolean) value);
