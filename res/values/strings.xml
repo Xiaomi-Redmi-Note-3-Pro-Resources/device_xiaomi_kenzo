@@ -28,6 +28,7 @@
     <string name="gestures_title">Gestures</string>
     <string name="dt2w_title">Double Tap to wake</string>
     <string name="dt2w_summary">Double tap on screen wake device</string>
+    <string name="buttons_brightness_gain">Hardware buttons backlight</string>
 
     <!-- USB Fastcharge -->
     <string name="usb_fastcharge_title">Power</string>

@@ -26,6 +26,7 @@
     <string name="gestures_title">Жесты</string>
     <string name="dt2w_title">Пробуждать двойным касанием</string>
     <string name="dt2w_summary">Пробуждать устройство двойным касание по экрану</string>
+    <string name="buttons_brightness_gain">Подсветка физических кнопок</string>
 
     <!-- USB Fastcharge -->
     <string name="usb_fastcharge_title">Питание</string>

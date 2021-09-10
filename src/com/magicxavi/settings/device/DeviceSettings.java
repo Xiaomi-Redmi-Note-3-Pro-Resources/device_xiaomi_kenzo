@@ -67,6 +67,10 @@ public class DeviceSettings extends PreferenceFragment implements
     //private static final String CATEGORY_QC= "qc";
     //public static final String PREF_QC_LIMIT = "qc_limit";
     //public static final String QC_LIMIT_PATH = "/sys/devices/soc.0/qpnp-smbcharger-16/power_supply/battery/constant_charge_current_max";
+    
+    // Audio
+    public static final  String PREF_BUTTONS_BRIGHTNESS_GAIN = "buttons_brightness_gain";
+    public static final  String BUTTONS_BRIGHTNESS_GAIN_PATH = "/sys/class/leds/button-backlight/max_brightness";
 
     private SecureSettingListPreference mSPECTRUM;
     private SecureSettingCustomSeekBarPreference mHeadphoneGain;
@@ -85,6 +89,10 @@ public class DeviceSettings extends PreferenceFragment implements
         SecureSettingCustomSeekBarPreference TorchBrightness2 = (SecureSettingCustomSeekBarPreference) findPreference(PREF_TORCH_BRIGHTNESS_2);
         TorchBrightness2.setEnabled(FileUtils.fileWritable(TORCH_2_BRIGHTNESS_PATH));
         TorchBrightness2.setOnPreferenceChangeListener(this);
+        
+        SecureSettingCustomSeekBarPreference ButtonsBrightnessGain = (SecureSettingCustomSeekBarPreference) findPreference(PREF_BUTTONS_BRIGHTNESS_GAIN);
+        ButtonsBrightnessGain.setEnabled(FileUtils.fileWritable(BUTTONS_BRIGHTNESS_GAIN_PATH));
+        ButtonsBrightnessGain.setOnPreferenceChangeListener(this);
 
         mHeadphoneGain = (SecureSettingCustomSeekBarPreference) findPreference(PREF_HEADPHONE_GAIN);
         mHeadphoneGain.setOnPreferenceChangeListener(this);
@@ -177,6 +185,10 @@ public class DeviceSettings extends PreferenceFragment implements
 
             case PREF_TORCH_BRIGHTNESS_1:
                 FileUtils.setValue(TORCH_1_BRIGHTNESS_PATH, (int) value);
+                break;
+                
+            case PREF_BUTTONS_BRIGHTNESS_GAIN:
+                FileUtils.setValue(BUTTONS_BRIGHTNESS_GAIN_PATH, (int) value);
                 break;
 
             case PREF_VIBRATION_STRENGTH:

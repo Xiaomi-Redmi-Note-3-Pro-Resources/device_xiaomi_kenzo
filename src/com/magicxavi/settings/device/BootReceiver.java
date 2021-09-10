@@ -60,5 +60,8 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                 context.getContentResolver(), DeviceSettings.PREF_DT2W, 0));
         FileUtils.setValue(DeviceSettings.USB_FASTCHARGE_PATH, Settings.Secure.getInt(
                 context.getContentResolver(), DeviceSettings.PREF_USB_FASTCHARGE, 0));
+        FileUtils.setValue(DeviceSettings.BUTTONS_BRIGHTNESS_GAIN_PATH,
+                Settings.Secure.getInt(context.getContentResolver(),
+                        DeviceSettings.PREF_BUTTONS_BRIGHTNESS_GAIN, 40));
     }
 }
