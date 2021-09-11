@@ -114,14 +114,14 @@
         <com.magicxavi.settings.device.preferences.SecureSettingCustomSeekBarPreference
             android:defaultValue="100"
             android:key="yellow_led"
-            android:max="200"
+            android:max="160"
             app:min="1"
             android:icon="@drawable/ic_torch"
             android:title="@string/yellow_torch_brightness_title_head" />
         <com.magicxavi.settings.device.preferences.SecureSettingCustomSeekBarPreference
             android:defaultValue="100"
             android:key="white_led"
-            android:max="200"
+            android:max="160"
             app:min="1"
             android:icon="@drawable/ic_torch"
             android:title="@string/white_torch_brightness_title_head" />
