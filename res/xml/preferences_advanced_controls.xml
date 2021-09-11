@@ -27,7 +27,7 @@
             android:title="@string/qc_limit_summary" />
     </PreferenceCategory>-->
 
-    <PreferenceCategory
+    <!--<PreferenceCategory
         android:key="fp_options"
         android:title="@string/fp_title">
 
@@ -37,7 +37,7 @@
             android:summary="@string/fp_wakeup_summary"
             android:title="@string/fp_wakeup_title"
             android:icon="@drawable/ic_fpwakeup" />
-    </PreferenceCategory>
+    </PreferenceCategory>-->
 
     <PreferenceCategory
         android:key="gestures"

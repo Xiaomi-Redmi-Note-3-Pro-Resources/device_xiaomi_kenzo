@@ -17,9 +17,9 @@ public class DeviceSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     // Fingerprint options
-    private static final String CATEGORY_FINGERPRINT_OPTIONS = "fp_options";
-    public static final String PREF_FPWAKEUP = "fpwakeup";
-    public static final String FPWAKEUP_PATH = "/sys/devices/soc.0/fpc_fpc1020.110/wakeup_enable";
+    //private static final String CATEGORY_FINGERPRINT_OPTIONS = "fp_options";
+    //public static final String PREF_FPWAKEUP = "fpwakeup";
+    //public static final String FPWAKEUP_PATH = "/sys/devices/soc.0/fpc_fpc1020.110/wakeup_enable";
 
     // Dirac
     private static final String PREF_ENABLE_DIRAC = "dirac_enabled";
@@ -150,13 +150,13 @@ public class DeviceSettings extends PreferenceFragment implements
         preset.setOnPreferenceChangeListener(this);
 
 
-        if (FileUtils.fileWritable(FPWAKEUP_PATH)) {
-            SecureSettingSwitchPreference fpwakeup = (SecureSettingSwitchPreference) findPreference(PREF_FPWAKEUP);
-            fpwakeup.setChecked(FileUtils.getFileValueAsBoolean(FPWAKEUP_PATH, false));
-            fpwakeup.setOnPreferenceChangeListener(this);
-        } else {
-            getPreferenceScreen().removePreference(findPreference(CATEGORY_FINGERPRINT_OPTIONS));
-        }
+        //if (FileUtils.fileWritable(FPWAKEUP_PATH)) {
+        //    SecureSettingSwitchPreference fpwakeup = (SecureSettingSwitchPreference) findPreference(PREF_FPWAKEUP);
+        //    fpwakeup.setChecked(FileUtils.getFileValueAsBoolean(FPWAKEUP_PATH, false));
+        //    fpwakeup.setOnPreferenceChangeListener(this);
+        //} else {
+        //    getPreferenceScreen().removePreference(findPreference(CATEGORY_FINGERPRINT_OPTIONS));
+        //}
 
         //if (FileUtils.fileWritable(DT2W_PATH)) {
         //    SecureSettingSwitchPreference dt2w = (SecureSettingSwitchPreference) findPreference(PREF_DT2W);
@@ -229,9 +229,9 @@ public class DeviceSettings extends PreferenceFragment implements
                 FileUtils.setStringProp(SPECTRUM_SYSTEM_PROPERTY, (String) value);
                 break;
 
-            case PREF_FPWAKEUP:
-                FileUtils.setValue(FPWAKEUP_PATH, (boolean) value);
-                break;
+            //case PREF_FPWAKEUP:
+            //    FileUtils.setValue(FPWAKEUP_PATH, (boolean) value);
+            //    break;
 
             //case PREF_DT2W:
             //    FileUtils.setValue(DT2W_PATH, (boolean) value);
