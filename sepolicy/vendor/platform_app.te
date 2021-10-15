@@ -1,1 +1,1 @@
-allow platform_app exported_audio_prop:file open;
+allow platform_app audio_config_prop:file open;
