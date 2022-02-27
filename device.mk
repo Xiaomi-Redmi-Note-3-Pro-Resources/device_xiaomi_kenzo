@@ -131,6 +131,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat64.enabled=true \
     ro.vendor.qti.am.reschedule_service=true \
+    ro.dex2oat_white_list=com.google.android.gms \
     ro.sys.fw.dex2oat_thread_count=8 \
     dalvik.vm.boot-dex2oat-cpu-set=0,1,6,7 \
     dalvik.vm.boot-dex2oat-threads=4 \
