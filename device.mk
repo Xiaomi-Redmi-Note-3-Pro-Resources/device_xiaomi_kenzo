@@ -513,7 +513,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_wlan_nv.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
-    
 
 # WFD
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -521,13 +520,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.hdmi.enable=true \
 	ro.hdmi.mirror.enable=true \
 	persist.sys.wfd.virtual=0
-
-# USB debugging
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp,adb \
-    ro.adb.secure=0 \
-    ro.secure=0 \
-    ro.debuggable=1
 
 # QMI
 PRODUCT_PACKAGES += \
