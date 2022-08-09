@@ -107,14 +107,8 @@ TARGET_CRYPTFS_HW_PATH ?= vendor/qcom/opensource/cryptfs_hw
 # Enable real time lockscreen charging current values
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
-# Extended filesystem support
-TARGET_EXFAT_DRIVER := sdfat
-
 # Exclude serif fonts for saving system.img size.
 EXCLUDE_SERIF_FONTS := true
-
-# exFat
-TARGET_EXFAT_DRIVER := exfat
 
 # Filesystem
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
