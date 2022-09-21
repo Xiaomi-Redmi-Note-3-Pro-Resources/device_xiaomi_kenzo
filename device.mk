@@ -420,7 +420,7 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 # Libshims
 PRODUCT_PACKAGES += \
     libbase_shim \
-    libui_shim
+    libui_shim.vendor
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
