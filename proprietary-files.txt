@@ -1,3 +1,5 @@
+## kenzo package version: V10.2.1.0.MHOMIXM, unless stated otherwise
+
 # ACBD Data
 etc/acdbdata/MTP/msm8952-tomtom-snd-card/MTP_WCD9330_Bluetooth_cal.acdb
 etc/acdbdata/MTP/msm8952-tomtom-snd-card/MTP_WCD9330_General_cal.acdb
