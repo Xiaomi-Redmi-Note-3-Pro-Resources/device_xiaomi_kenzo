@@ -41,7 +41,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="kenzo-user 6.0.1 MMB29M V10.2.1.0.MHOMIXM release-keys"
 
 BUILD_FINGERPRINT=Xiaomi/kenzo/kenzo:6.0.1/MMB29M/V10.2.1.0.MHOMIXM:user/release-keys
-
-# Advanced Controls
-PRODUCT_PACKAGES += \
-    AdvancedControls
