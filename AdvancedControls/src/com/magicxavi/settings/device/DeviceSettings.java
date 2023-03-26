@@ -59,10 +59,6 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final  String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
     public static final  String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
 
-    // Spectrum
-    public static final String PREF_SPECTRUM = "spectrum";
-    public static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
-
     // QC limit
     //private static final String CATEGORY_QC= "qc";
     //public static final String PREF_QC_LIMIT = "qc_limit";
@@ -72,7 +68,6 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final  String PREF_BUTTONS_BRIGHTNESS_GAIN = "buttons_brightness_gain";
     public static final  String BUTTONS_BRIGHTNESS_GAIN_PATH = "/sys/class/leds/button-backlight/max_brightness";
 
-    private SecureSettingListPreference mSPECTRUM;
     private SecureSettingCustomSeekBarPreference mHeadphoneGain;
     private SecureSettingCustomSeekBarPreference mMicrophoneGain;
 
@@ -119,11 +114,6 @@ public class DeviceSettings extends PreferenceFragment implements
             startActivity(intent);
             return true;
         });
-
-        mSPECTRUM = (SecureSettingListPreference) findPreference(PREF_SPECTRUM);
-        mSPECTRUM.setValue(FileUtils.getStringProp(SPECTRUM_SYSTEM_PROPERTY, "0"));
-        mSPECTRUM.setSummary(mSPECTRUM.getEntry());
-        mSPECTRUM.setOnPreferenceChangeListener(this);
 
         boolean enhancerEnabled;
         try {
@@ -221,12 +211,6 @@ public class DeviceSettings extends PreferenceFragment implements
                     getContext().startService(new Intent(getContext(), DiracService.class));
                     DiracService.sDiracUtils.setLevel(String.valueOf(value));
                 }
-                break;
-
-            case PREF_SPECTRUM:
-                mSPECTRUM.setValue((String) value);
-                mSPECTRUM.setSummary(mSPECTRUM.getEntry());
-                FileUtils.setStringProp(SPECTRUM_SYSTEM_PROPERTY, (String) value);
                 break;
 
             //case PREF_FPWAKEUP:

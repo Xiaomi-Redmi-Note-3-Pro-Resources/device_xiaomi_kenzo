@@ -97,18 +97,6 @@
     <string name="vibration_title">Вибрация</string>
     <string name="vibration_strength_title">Сила</string>
 
-    <!-- Spectrum Profiles -->
-    <string name="spectrum_profile_title">Производительность</string>
-    <string name="spectrum_title">Настройки</string>
-    <string name="spectrum_summary">Выбрать настройки</string>
-    <string name="spectrum_dialogTitle">Выбрать настройки</string>
-
-    <!-- Values for Spectrum Presets -->
-    <string name="spectrum_performance">Производительность</string>
-    <string name="spectrum_battery">Энергосбережение</string>
-    <string name="spectrum_gaming">Гейминг</string>
-    <string name="spectrum_balance">Баланс</string>
-
     <!-- kcal -->
     <string name="advanced_settings_kcal">Калибровка цвета дисплея</string>
     <string name="cat_colormanagement">Настройка цвета</string>

@@ -51,18 +51,6 @@
     <string name="vibration_title">Feedback tátil</string>
     <string name="vibration_strength_title">Força</string>
 
-    <!-- Spectrum Profiles -->
-    <string name="spectrum_profile_title">Desempenho</string>
-    <string name="spectrum_title">Configurações de desempenho</string>
-    <string name="spectrum_summary">Escolha seu perfil de desempenho</string>
-    <string name="spectrum_dialogTitle">Escolha seu perfil de desempenho</string>
-
-    <!-- Values for Spectrum Presets -->
-    <string name="spectrum_performance">Performance</string>
-    <string name="spectrum_battery">Bateria</string>
-    <string name="spectrum_gaming">Gaming</string>
-    <string name="spectrum_balance">Balanceado</string>
-
     <!-- kcal -->
     <string name="advanced_settings_kcal">Calibração de cores da tela</string>
     <string name="cat_colormanagement">Configurações de cores</string>

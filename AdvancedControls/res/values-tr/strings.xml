@@ -51,18 +51,6 @@
     <string name="vibration_title">Dokunuşsal geri bildirim</string>
     <string name="vibration_strength_title">Güç</string>
 
-    <!-- Spectrum Profiles -->
-    <string name="spectrum_profile_title">Performans</string>
-    <string name="spectrum_title">Performans Ayarları</string>
-    <string name="spectrum_summary">Performans ayarlarınızı seçin</string>
-    <string name="spectrum_dialogTitle">Performans ayarlarınızı seçin</string>
-
-    <!-- Values for Spectrum Presets -->
-    <string name="spectrum_performance">Performans</string>
-    <string name="spectrum_battery">Güç Tasarrufu</string>
-    <string name="spectrum_gaming">Oyun</string>
-    <string name="spectrum_balance">Dengeli</string>
-
     <!-- kcal -->
     <string name="advanced_settings_kcal">Ekran Renk Kalibrasyonu</string>
     <string name="cat_colormanagement">Renk Ayarları</string>

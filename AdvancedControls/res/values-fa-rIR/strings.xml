@@ -51,18 +51,6 @@
     <string name="vibration_title">تنظیم لرزش دستگاه</string>
     <string name="vibration_strength_title">لرزش</string>
 
-    <!-- Spectrum Profiles -->
-    <string name="spectrum_profile_title">تنظیم پردازشگر</string>
-    <string name="spectrum_title">تنظیم سرعت پردازشگر</string>
-    <string name="spectrum_summary">سرعت پرزاشگر را انتخاب کنید</string>
-    <string name="spectrum_dialogTitle">سرعت پرزاشگر را انتخاب کنید</string>
-
-    <!-- Values for Spectrum Presets -->
-    <string name="spectrum_performance">قدرتمند</string>
-    <string name="spectrum_battery">ذخیره باتری</string>
-    <string name="spectrum_gaming">بازی</string>
-    <string name="spectrum_balance">عادی</string>
-
     <!-- kcal -->
     <string name="advanced_settings_kcal">کالیبره کردن رنگ های صفحه نمایش</string>
     <string name="cat_colormanagement">تنظیم رنگ ها</string>
