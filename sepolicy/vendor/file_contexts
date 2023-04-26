@@ -65,12 +65,18 @@
 # Legacy paths
 /system/bin/mm-qcamera-daemon                                                               u:object_r:mm-qcamerad_exec:s0
 /system/bin/wcnss_service                                                                   u:object_r:wcnss_service_exec:s0
-/system/bin/energy-awareness                                                                u:object_r:energyawareness_exec:s0
+/vendor/bin/energy-awareness                                                                u:object_r:energyawareness_exec:s0
 /vendor/bin/wcnss_filter                                                                    u:object_r:wcnss_filter_exec:s0
 /vendor/bin/qseecomd                                                                        u:object_r:tee_exec:s0
 
 # GNSS
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gnss@2\.0-service-qti                     u:object_r:hal_gnss_qti_exec:s0
+
+# Perf
+/sys/devices/soc\.0/[a-z0-9]+\.qcom,msmcci-ccimon(/.*)?                                     u:object_r:sysfs_devfreq:s0
+/sys/devices/soc\.0/qcom,gpubw\.[a-z0-9]+/devfreq/qcom,gpubw\.[a-z0-9]+(/.*)?               u:object_r:sysfs_devfreq:s0
+/sys/devices/soc\.0/qcom,cpubw\.[a-z0-9]+/devfreq/qcom,cpubw\.[a-z0-9]+(/.*)?               u:object_r:sysfs_devfreq:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf@2\.0-service                     u:object_r:hal_perf_default_exec:s0
 
 # Persist
 /(mnt/vendor)/persist/bluetooth(/.*)?                                                       u:object_r:persist_bluetooth_file:s0

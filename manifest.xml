@@ -447,23 +447,14 @@
         </interface>
     </hal>
     <hal format="hidl">
-         <name>vendor.qti.hardware.iop</name>
-         <transport>hwbinder</transport>
-         <version>2.0</version>
-         <interface>
-             <name>IIop</name>
-             <instance>default</instance>
-         </interface>
-     </hal>
-     <hal format="hidl">
-         <name>vendor.qti.hardware.perf</name>
-         <transport>hwbinder</transport>
-         <version>1.0</version>
-         <interface>
-             <name>IPerf</name>
-             <instance>default</instance>
-         </interface>
-     </hal>
+        <name>vendor.qti.hardware.perf</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IPerf</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <!-- WFD HAL Service -->
     <hal format="hidl">
         <name>com.qualcomm.qti.wifidisplayhal</name>

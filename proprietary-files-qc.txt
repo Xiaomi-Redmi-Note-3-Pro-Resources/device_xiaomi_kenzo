@@ -173,9 +173,6 @@ vendor/bin/hw/android.hardware.drm@1.2-service.widevine|e130b8f1c8d46d8a185b00cb
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|dee5b7838ac561a2292e89fc0c4ccd1932224215
 vendor/lib64/libwvhidl.so|7161a1f0992da071e842655fcd42f20fa36909ac
 
-# Energy awareness
-vendor/bin/energy-awareness
-
 # FM - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 product/lib/vendor.qti.hardware.fm@1.0.so|a090651122fcad265ae7562c88dca746f893ad36
 product/lib64/vendor.qti.hardware.fm@1.0.so|fc7ad886f82089edf36509865fadac17a7340f32
@@ -364,6 +361,26 @@ vendor/lib64/libOmxWmaDec.so|32e1b9c72d0b0a8b74978e1687b701e18030d68a
 vendor/lib64/libmm-color-convertor.so|d3539eb5a6a986f8ba81bac9cbf7b34872b12f1a
 -vendor/lib/libgpustats.so|75fc8f58b071f3c27d708010e1b40eafba091a14
 -vendor/lib64/libgpustats.so|a899ae72983277442cdacf8f43271986c91ce710
+
+# Perf - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
+vendor/bin/energy-awareness|def07e366347c7f0a7778b748acb49557ab21d2a
+vendor/bin/msm_irqbalance|b5e55b4b0934b65b7dd5d2201f9a70f6f77a4e7c
+vendor/bin/hw/vendor.qti.hardware.perf@2.0-service|5c2593e17b8dac6e4e660478b419bf367d6c5c40
+vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc|cc8658db5e19f8e5e575fb986e7d38147e675f8d
+vendor/lib64/libperfconfig.so|d590b6ce31c8b2158a3653c9248f5c12139d27cd
+vendor/lib64/libperfgluelayer.so|269245742c7628539e9d86a1fa4b9ba2551774e3
+vendor/lib64/libqti-perfd.so|f252bc957f45dd389463abe97be3f0f129da8b67
+vendor/lib64/libqti-perfd-client.so|94ab278009a42e75c1d62f6dfc41d85b0cc1f412
+vendor/lib64/libqti-util.so|e790b62bb198442145fcba20c2dc61d182c45a47
+vendor/lib64/vendor.qti.hardware.perf@1.0.so|9b411738cf2ca8319bacf1f859cc3679f576215a
+vendor/lib64/vendor.qti.hardware.perf@2.0.so|3131f461ecb897f68d02df0bf1027ca0a7d07c1d
+vendor/lib/libperfconfig.so|11f6ec2d7da51872dad2f016a6638df209adca14
+vendor/lib/libperfgluelayer.so|5c9db256d92ddf5bce65941f2cad5eaeb4f028fd
+vendor/lib/libqti-perfd.so|855dd68c8a277c8b4787579a935a23bead62dd59
+vendor/lib/libqti-perfd-client.so|a6ddd909d581fbb5d8caa2f1f489ec5c2c5789c1
+vendor/lib/libqti-util.so|f1a4d655ee827d791447f303e59197e7271fafb5
+vendor/lib/vendor.qti.hardware.perf@1.0.so|d04786a723d766b9d22c88e8aec5f8036d1ac53e
+vendor/lib/vendor.qti.hardware.perf@2.0.so|0a08551185ac8626b832068ecb77997800050233
 
 # Peripheral manager - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/bin/pm-proxy|1f216a6f54e9b97c026f3f3bc4d7d441d58d90a7
