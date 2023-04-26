@@ -46,17 +46,17 @@ vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
 
-# Bluetooth - from daisy - xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.20.0.QDLMIXM
+# Bluetooth - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|378ad8ce95651b4bf81ad73aaffbdf0666c55432
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|a244ce3acd958c31865e048e0ead9bc54d1c0465
 vendor/lib64/libbt-hidlclient.so|8941f5c8f9e1422117685b2e76f35ced85b167c0
 vendor/lib64/libbtnv.so|ce4e129e4b7ed7a25a663c26139e5efc0ef88215
 
-# Bluetooth (shared dependencies) - from daisy - xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.20.0.QDLMIXM
+# Bluetooth (shared dependencies) - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/lib64/vendor.qti.hardware.fm@1.0.so|fc7ad886f82089edf36509865fadac17a7340f32
 
-# Bluetooth Audio - from daisy - xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.20.0.QDLMIXM
+# Bluetooth Audio - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|76134fb75ff99948e0d00728db058aed8f519c3f
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|7cdd376b08b8571e51674e0e61607c6a52a5a24a
 
@@ -70,7 +70,7 @@ vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so|867e374575edf2a445ed9fa774f5566f763f0756
 vendor/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 vendor/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
-# CNE - from daisy - xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.18.0.QDLMIXM
+# CNE - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 etc/cne/Nexus/ATT/ATT_profiles.xml|33e568627fd3f94dc45bca1c01ad10e6d8fb5b52
 etc/cne/Nexus/ROW/ROW_profiles.xml|238e785e9674b27c4b2365958d127533d7293132
 etc/cne/Nexus/VZW/VZW_profiles.xml|0f63b632e3a3f114def7aeadaabd13851c8ceec5
@@ -131,7 +131,7 @@ vendor/lib64/vendor.qti.latency@2.0.so|0144eec541989f450695ec8cbdd595df4009fe1a
 -vendor/app/CneApp/CneApp.apk|2356a0335ab8e0106832a9325f972467654fd1f0
 -vendor/app/IWlanService/IWlanService.apk|12da3d82b6cc062d2af29a0b5f43fc8acf9adbb2
 
-# DPM - from daisy - xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.18.0.QDLMIXM
+# DPM - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 product/bin/dpmd|cac8f3eadeeec202f56d5b5f7a8c75e82e376d9f
 product/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
 product/etc/init/dpmd.rc|7f95195a89fddce06b93006a737701270e91f669
@@ -168,7 +168,7 @@ vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
 
-# DRM (Widevine) - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.18.0.QDLMIXM
+# DRM (Widevine) - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine|e130b8f1c8d46d8a185b00cba5ff8a2a871ee94c
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|dee5b7838ac561a2292e89fc0c4ccd1932224215
 vendor/lib64/libwvhidl.so|7161a1f0992da071e842655fcd42f20fa36909ac
@@ -176,7 +176,7 @@ vendor/lib64/libwvhidl.so|7161a1f0992da071e842655fcd42f20fa36909ac
 # Energy awareness
 vendor/bin/energy-awareness
 
-# FM - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.20.0.QDLMIXM
+# FM - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 product/lib/vendor.qti.hardware.fm@1.0.so|a090651122fcad265ae7562c88dca746f893ad36
 product/lib64/vendor.qti.hardware.fm@1.0.so|fc7ad886f82089edf36509865fadac17a7340f32
 system/lib/fm_helium.so|feb4819f1898c67dfda4f965d7cc2711c74d1a99
@@ -189,7 +189,7 @@ vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|9d27a7a6cea72a48739e741e749bf
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.msm8952.so
 
-# GPS - from daisy - daisy_sprout:10/QKQ1.191002.002/V11.0.18.0.QDLMIXM
+# GPS - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/bin/garden_app|f0a1f082c2abaf0ffda363e52361587f1c8a7492
 vendor/bin/hw/android.hardware.gnss@2.0-service-qti|7f7006829005658c9b89c61ac02f107d3d6fe470
 vendor/bin/loc_launcher|06793983f836a9b42b5ff3848f8fe177134c1379
@@ -289,7 +289,7 @@ vendor/lib64/librs_adreno.so
 vendor/lib64/librs_adreno_sha1.so
 vendor/lib64/libscale.so
 
-# Graphics (Firmware) - from daisy - xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.18.0.QDLMIXM
+# Graphics (Firmware) - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/firmware/a530_gpmu.fw2|706da8d5ee565dcf456341f805ee75a40773f65a
 vendor/firmware/a530_pfp.fw|d027c70fde64241ec13160d09ee1b6c272974a4b
 vendor/firmware/a530_pm4.fw|b1cf625b5552b99839687f479c124ac5daca2ca2
@@ -299,11 +299,11 @@ vendor/firmware/a530v2_seq.fw2|63b6d25594a5c1f4217d996a2b636e17a29fc840
 vendor/firmware/a530v3_gpmu.fw2|0a2f6f450231673d75ba39e5d28776db3becf810
 vendor/firmware/a530v3_seq.fw2|8963a53acc689725dee4b22881a4dd4b80e5def8
 
-# Graphics (HDR) - from daisy - xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.18.0.QDLMIXM
+# Graphics (HDR) - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/lib/libhdr_tm.so|4c371d0931245a65d0b4df768de8837bbdf4832e
 vendor/lib64/libhdr_tm.so|c388a9b14966583cde2c682c129fcf5cfa298239
 
-# Graphics (SDM) - from daisy - xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.18.0.QDLMIXM
+# Graphics (SDM) - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/lib/libscalar.so|7ac579768ffd2caee903d69d8fd3f7918b04ffbe
 vendor/lib/libsdm-color.so|fa3f8c0062d474fdf6960fcbcc3bf21a5c3fd594
 vendor/lib/libsdm-diag.so|46b5c2d6fab1e655efde1657b2e51dc00c00b763
@@ -334,7 +334,7 @@ vendor/lib/libsmwrapper.so
 vendor/lib/vendor.qti.voiceprint@1.0.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so	
 
-# Media - from daisy - xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.18.0.QDLMIXM
+# Media - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/lib/libI420colorconvert.so|0dfd4d0e49f4250e98e781483048a296a679e05e
 vendor/lib/libOmxAacDec.so|55772a6d0cf3e6a5a2c32348fd7096b8737d490b
 vendor/lib/libOmxAlacDec.so|adca064b15a7d545075af6f5222db45dec8202b5
@@ -365,7 +365,7 @@ vendor/lib64/libmm-color-convertor.so|d3539eb5a6a986f8ba81bac9cbf7b34872b12f1a
 -vendor/lib/libgpustats.so|75fc8f58b071f3c27d708010e1b40eafba091a14
 -vendor/lib64/libgpustats.so|a899ae72983277442cdacf8f43271986c91ce710
 
-# Peripheral manager - from daisy - xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.18.0.QDLMIXM
+# Peripheral manager - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/bin/pm-proxy|1f216a6f54e9b97c026f3f3bc4d7d441d58d90a7
 vendor/bin/pm-service|8a521f14576d0d2edf03b4500a54379d37e15d4e
 vendor/lib/libperipheral_client.so|b75a6adac094ddcd6ded9415cae83e18d1e7e5d0
@@ -392,7 +392,7 @@ vendor/lib64/vendor.display.color@1.0_vendor.so
 vendor/lib64/vendor.display.postproc@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so
 
-# Power-off alarm - from daisy - xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.18.0.QDLMIXM
+# Power-off alarm - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 product/framework/vendor.qti.hardware.alarm-V1.0-java.jar|69dedc62181ae26bb2fac4eaacb1f2c38eb21c31
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|28c768324a36e12a8c4a1a968caa25ad94a160fe
 vendor/bin/power_off_alarm|a98e375328492c0405d1712722bca0effa8cf2bb
@@ -435,7 +435,7 @@ vendor/lib64/libqmi_encdec.so|dc537a87d9cb9a89755a3e70fc8affeda11b9a66
 vendor/lib64/libqmiservices.so|d10eef316cc67ce81ec58bb6288785fa02fd4202
 vendor/lib64/libsmemlog.so|63ec11ff7660447465bc9905a8c1967fa2a1729f
 
-# QMI - from daisy - xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.18.0.QDLMIXM
+# QMI - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/lib/libqmi_cci.so|a921e84ec500f7cfb7fe88a4ffba149581410a44
 vendor/lib64/libqmi_cci.so|411a074dc765fb263bec50531ce5c408dd72388f
 
@@ -476,7 +476,7 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0_vendor.so|7df497d26
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so|f0f52576763dafcb528650dd5b4e937a0db54626
 vendor/radio/qcril_database/qcril.db|4df6c832d5c99d2760b7602d100dd2d3ac9954e6
 
-# RIL - from daisy - xiaomi/daisy/daisy_sprout:9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ
+# RIL - from daisy-user 9 PKQ1.180917.001 V10.0.20.0.PDLMIXM release-keys
 vendor/bin/rmt_storage|346ef281e829109ba11af912509309e520351ef9
 vendor/bin/tftp_server|05a9c0e0e691e534e703bded4a99083d25a26ebb
 vendor/lib64/libqrtr.so|83676274fde1056a0507b4100a3a5423f5af5021
@@ -519,7 +519,7 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so|7d7044da11fa3784626277270510
 # RIL (IMS) - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|447d205fca7ea674f7f3f072e7d26ae0a0a9b4b4
 
-# RIL - from daisy - xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.18.0.QDLMIXM
+# RIL - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 product/etc/permissions/qcrilhook.xml|ceb890ab3c1645aa0d0044abab1ba58c4097a991
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml|68901007ba1a48ceb1b728fc3b5483dd51b5e3a0
 product/etc/permissions/telephonyservice.xml|a39eefcaf85fb8da60044fdbbcfddd95deb031c8
@@ -541,11 +541,11 @@ vendor/etc/init/vendor.qti.tftp.rc|091915c28a3bc574d39189688748cc922d9e65e4
 # RIL (IMS) - from leeco - LeEco/LeMax2_WW/le_x2:6.0.1/FKXOSOP5801910311S/letv10310125:user/release-keys
 -product/priv-app/ims/ims.apk|9ad86a6ace15236854ea128a08178537dbeaf634
 
-# RIL (IMS) - from daisy - xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.18.0.QDLMIXM
+# RIL (IMS) - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 product/lib64/libimscamera_jni.so|7cb89110cca94d37d68c705f12a7a5a4ee106139
 product/lib64/libimsmedia_jni.so|3540752cc3658261ea3c909f03018eea4398f84e
 
-# Sensors - from daisy - xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.18.0.QDLMIXM
+# Sensors - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/bin/sensors.qti|a0701f889c2af8dd964a8f0300761e91a3748815
 vendor/lib/hw/activity_recognition.msm8953.so:vendor/lib/hw/activity_recognition.msm8952.so|1c7334f56182513bddefcb3b655064cca1121e21
 vendor/lib/libsensor1.so|a3bff5966ef0dd0623d385da9a8809f6dabb11f3
@@ -567,7 +567,7 @@ vendor/lib64/libthermalioctl.so|47e3843ab73b399347d0c017d75b9150d83082ba
 # Thermal config
 vendor/etc/thermal-engine.conf|fcfb1f8ee3b8306034986512ca21167e569ca2c2
 
-# Time services - from daisy - xiaomi/daisy/daisy_sprout:10/QKQ1.191002.002/V11.0.18.0.QDLMIXM
+# Time services - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/bin/time_daemon|75b8a6a14cfb4424499ccb2bf1cad011df295d0e
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 vendor/lib/libtime_genoff.so|a574d287e7e73649685b702f4fe497eb7c6ba727
