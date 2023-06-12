@@ -316,6 +316,9 @@ system_ext/framework/com.android.hotwordenrollment.common.util.jar|0492cd3db2e25
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|91c49e2f1f95fe76952eb55d7a936a997685b964
 -product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|89b2c917c0c35489f10306f1627b2cf7cf6b59cf
 
+# Keystore
+vendor/lib64/hw/keystore.msm8952.so
+
 # Listen
 vendor/lib/hw/sound_trigger.primary.msm8952.so
 vendor/lib/libadpcmdec.so
