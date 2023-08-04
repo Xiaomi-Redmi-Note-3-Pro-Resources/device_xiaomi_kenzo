@@ -83,15 +83,6 @@ media.stagefright.enable-scan=true
 persist.vendor.cne.feature=1
 persist.vendor.dpm.feature=1
 
-# Dex2oat use 6 cores during bootup dex compilation
-dalvik.vm.boot-dex2oat-threads=6
-
-# Dex2oat use 4 cores durning normal dex compilation (app installations)
-dalvik.vm.dex2oat-threads=6
-
-# Dex2oat use 4 cores during boot image dex compilation
-dalvik.vm.image-dex2oat-threads=4
-
 # Data modules
 ro.vendor.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
