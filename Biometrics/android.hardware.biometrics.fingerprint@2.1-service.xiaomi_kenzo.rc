@@ -32,7 +32,7 @@ on property:ro.boot.fpsensor=gdx
     setprop persist.sys.fp.goodix 1
     setprop ro.hardware.fingerprint gdx
 
-service gx_fpd /system/bin/gx_fpd
+service vendor.gx_fpd /vendor/bin/gx_fpd
     class late_start
     user system
     group system
@@ -40,7 +40,7 @@ service gx_fpd /system/bin/gx_fpd
     writepid /dev/cpuset/system-background/tasks
 
 on property:persist.sys.fp.goodix=0
-    stop gx_fpd
+    stop vendor.gx_fpd
 
 on property:persist.sys.fp.goodix=1
-    enable gx_fpd
+    enable vendor.gx_fpd

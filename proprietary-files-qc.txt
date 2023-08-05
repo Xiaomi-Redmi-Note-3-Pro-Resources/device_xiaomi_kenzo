@@ -1,4 +1,4 @@
-# kenzo device proprietary files - from Smartron/srtphone/rimo02a:8.0.0/T5524INDURC-475/475, unless pinned
+# kenzo package version: Smartron/srtphone/rimo02a:8.0.0/T5524INDURC-475/475, unless stated otherwise
 
 # ADSP
 lib/libqvr_adsp_driver_stub.so
@@ -63,6 +63,24 @@ vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so|7b13cf50e7a5fa7cd59e28e54c6b7dc0688
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so|867e374575edf2a445ed9fa774f5566f763f0756
 vendor/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 vendor/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+
+# Camera
+vendor/lib/libmmcamera_isp_abcc44.so
+vendor/lib/libmmcamera_trueportrait_lib.so
+
+# Camera - from hydrogen-user 7.0 NRD90M V10.2.2.0.NBCMIXM release-keys
+vendor/lib/libchromaflash.so|4cb4cc9dc1e290ba78b1156a029af07c8423a621
+vendor/lib/libllvd_smore.so|740de4c339772df80858ddd9390f91ead71eadeb
+vendor/lib/libllvd_sw_tnr.so|406895e2ae614ac84a62d1758bce1810b99c5cda
+vendor/lib/libmmcamera_llvd.so|5fb3a000388d98a043d481964d29b11a87ba92db
+vendor/lib/libmmcamera_sw_tnr.so|59b0f350eb0cfa85399c296af14ac680ca99705e
+vendor/lib/liboptizoom.so|fb0925136938a8936aaa7694a3e38d4d59d5d4f1
+vendor/lib/libtrueportrait.so|b8e11c098bd859aae6c535cdb87e3e36f6b1c6ef
+vendor/lib/libubifocus.so|c26bc3a9a13bed065dc53299f9751ad6bc81c375
+
+# Camera - from mido-user 7.0 NRD90M V11.0.2.0.NCFMIXM release-keys
+vendor/lib/libmmcamera_stillmore_lib.so|3b15e48502c61d1c638f270befaa6a546c96f184
+vendor/lib/libseemore.so|8fc2ae17c7364f789bda71b20a2fba006f9568c8
 
 # CNE - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 etc/cne/Nexus/ATT/ATT_profiles.xml|33e568627fd3f94dc45bca1c01ad10e6d8fb5b52
@@ -316,9 +334,6 @@ system_ext/framework/com.android.hotwordenrollment.common.util.jar|0492cd3db2e25
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|91c49e2f1f95fe76952eb55d7a936a997685b964
 -product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|89b2c917c0c35489f10306f1627b2cf7cf6b59cf
 
-# Keystore
-vendor/lib64/hw/keystore.msm8952.so
-
 # Listen
 vendor/lib/hw/sound_trigger.primary.msm8952.so
 vendor/lib/libadpcmdec.so
@@ -357,21 +372,48 @@ vendor/lib64/libmm-color-convertor.so|d3539eb5a6a986f8ba81bac9cbf7b34872b12f1a
 -vendor/lib/libgpustats.so|75fc8f58b071f3c27d708010e1b40eafba091a14
 -vendor/lib64/libgpustats.so|a899ae72983277442cdacf8f43271986c91ce710
 
-# Perf - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
+# Perf - from from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
+system/lib/libqti-at.so:system_ext/lib/libqti-at.so|968f7e23f5bc7e08c1eb5af593c5586b17e69453
+system/lib/libqti-perfd-client_system.so:system_ext/lib/libqti-perfd-client_system.so|cd1365a206ee4a97e22e51e705073a6972b462f8
+system/lib/libqti_performance.so:system_ext/lib/libqti_performance.so|5f652f43b59c0cc89371d19941dfed3ca1b929e9
+system/lib64/libqti-at.so:system_ext/lib64/libqti-at.so|15fb6dd0e4156e4b385a2ba741512cc6aa307d10
+system/lib64/libqti-perfd-client_system.so:system_ext/lib64/libqti-perfd-client_system.so|52f9bd66e51d3f20c40eb018772052b98e004124
+system/lib64/libqti_performance.so:system_ext/lib64/libqti_performance.so|9f8c3f5ebb46a3b8cb6047970e6cf4891966c526
 vendor/bin/energy-awareness|def07e366347c7f0a7778b748acb49557ab21d2a
 vendor/bin/msm_irqbalance|b5e55b4b0934b65b7dd5d2201f9a70f6f77a4e7c
 vendor/bin/hw/vendor.qti.hardware.perf@2.0-service|07b1b78015ee6d8d12ae38a5c7a3253567ee97e8
 vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc|cc8658db5e19f8e5e575fb986e7d38147e675f8d
+vendor/lib/libperfconfig.so|11f6ec2d7da51872dad2f016a6638df209adca14
+vendor/lib/libperfgluelayer.so|5c9db256d92ddf5bce65941f2cad5eaeb4f028fd
+vendor/lib/libqti-perfd-client.so|ca0e9b4e029985949b8c0fcc9e9a7d543a7a789e
+vendor/lib/libqti-perfd.so|855dd68c8a277c8b4787579a935a23bead62dd59
+vendor/lib/libqti-util.so|f1a4d655ee827d791447f303e59197e7271fafb5
+vendor/lib/libqti-utils.so|8e5322144620c5b4ec9fef6402fc0b09160c1f90
+vendor/lib64/libadaptlaunch.so|c28f34fbd6614b1f15a8f4845fb631f5afe16c00
+vendor/lib64/libappclassifier.so|6b39a87eb92b4aa721728183cfdd717a62c3f535
+vendor/lib64/libgameoptfeature.so|7cfd581e1ed936ae5ce021a71881c102095a1ec0
+vendor/lib64/liblearningmodule.so|16bc168a8ff739b7e54a9c089a5695471f1e9910
+vendor/lib64/libmeters-ns.so|bce04b8dad64dc7e4ad6114bc8771bf5c6f90464
+vendor/lib64/libmeters.so|3930232951d085b3f0b21f97a5f38f1696c76a8c
 vendor/lib64/libperfconfig.so|d590b6ce31c8b2158a3653c9248f5c12139d27cd
 vendor/lib64/libperfgluelayer.so|269245742c7628539e9d86a1fa4b9ba2551774e3
 vendor/lib64/libqti-perfd.so|f252bc957f45dd389463abe97be3f0f129da8b67
 vendor/lib64/libqti-perfd-client.so|754fc2b05a5c81825108cfcdfc036156216592a9
 vendor/lib64/libqti-util.so|e790b62bb198442145fcba20c2dc61d182c45a47
-vendor/lib/libperfconfig.so|11f6ec2d7da51872dad2f016a6638df209adca14
-vendor/lib/libperfgluelayer.so|5c9db256d92ddf5bce65941f2cad5eaeb4f028fd
-vendor/lib/libqti-perfd.so|855dd68c8a277c8b4787579a935a23bead62dd59
-vendor/lib/libqti-perfd-client.so|ca0e9b4e029985949b8c0fcc9e9a7d543a7a789e
-vendor/lib/libqti-util.so|f1a4d655ee827d791447f303e59197e7271fafb5
+vendor/lib64/libqti-utils.so|6be58a4928484c5cf0b2ebf25944d4962958801a
+vendor/lib64/libskewknob.so|59677e968b7c35f205d000e6a6b10d80b2ac8200
+
+# Perf (IOP) - from from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
+system/lib/libqti-iopd-client_system.so:system_ext/lib/libqti-iopd-client_system.so|d91db26d17012f654a222bf325793bdce29e0f1b
+system/lib64/libqti-iopd-client_system.so:system_ext/lib64/libqti-iopd-client_system.so|1f65e993f79758b2833df88413029d4af059a2eb
+vendor/lib/libqti-iopd-client.so|e62e6ebc127ab2f5db77e9699fac4548b86a26f7
+vendor/lib/vendor.qti.hardware.iop@1.0.so|8525c29dde11430973e1f26339c915a52de870e9
+vendor/lib/vendor.qti.hardware.iop@2.0.so|cecd7cef970d48b0709da4eaa9e6966a083a3ab0
+vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so|42ee66ab1e166a09aa2e9e35d0a731a772b0117f
+vendor/lib64/libqti-iopd-client.so|40155dd9b4218e317d23c23c2529cf5f709cdd9f
+vendor/lib64/vendor.qti.hardware.iop@1.0.so|a9d2a6bec613954b422a4f50fee70ec0754be65d
+vendor/lib64/vendor.qti.hardware.iop@2.0.so|0b657aa0eaedb463ef96df94b31010449c5a34a9
+vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so|3fd6f434ee5e9351cca7439dd3cc07e10dcf9a8a
 
 # Peripheral manager - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/bin/pm-proxy|1f216a6f54e9b97c026f3f3bc4d7d441d58d90a7
@@ -562,12 +604,6 @@ vendor/lib64/libsensor_reg.so|54baa94535e7dd96804019810e90cfbec5519bf5
 vendor/lib64/sensor_calibrate.so|4bb147013fc7bb41b1009b591a4d91abbc54fb30
 vendor/lib64/sensors.ssc.so|9affbc5130223a63c7c8ee33a1b7408d739e1466
 
-# Thermal - from kenzo - stock 10.2.1.0
-vendor/bin/thermal-engine|dc2a090d66e60a227c0bbd76bbc1e11779ea5239
-vendor/lib64/libthermalioctl.so|47e3843ab73b399347d0c017d75b9150d83082ba
--vendor/lib/libthermalclient.so|6096637d37150d89caf3c730c9964ac07797fa55
--vendor/lib64/libthermalclient.so|9beae9671d80ee9b1d47689ed32b5780a863cb77
-
 # Thermal config
 vendor/etc/thermal-engine.conf|fcfb1f8ee3b8306034986512ca21167e569ca2c2
 
@@ -577,3 +613,6 @@ vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 vendor/lib/libtime_genoff.so|a574d287e7e73649685b702f4fe497eb7c6ba727
 vendor/lib64/libtime_genoff.so|06df52867790cdbbcc674a3a28d7ad7c8cc161ac
 -vendor/app/TimeService/TimeService.apk|27f9b81621c446baa8c37581d9bfbca2fd67b496
+
+# Wi-Fi
+bin/wcnss_service
