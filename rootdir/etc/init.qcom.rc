@@ -486,7 +486,6 @@ on property:sys.boot_completed=1
 on property:vold.decrypt=trigger_restart_framework
     restart vendor.camera-provider-2-4
     start wcnss-service
-    start config_bt_addr
 
 service vendor.cnd /vendor/bin/cnd
     class main
@@ -518,12 +517,6 @@ service start_hci_filter /vendor/bin/wcnss_filter
     seclabel u:r:bluetooth:s0
     disabled
     writepid /dev/cpuset/system-background/tasks
-
-service config_bt_addr /vendor/bin/btnvtool -O
-    class core
-    user bluetooth
-    group bluetooth radio
-    oneshot
 
 # FM
 on property:hw.fm.init=*

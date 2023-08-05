@@ -10,7 +10,6 @@ allow init video_device:chr_file { ioctl read write open } ;
 allow init init:socket { read ioctl create write } ;
 allow init ion_device:chr_file { read write open ioctl } ;
 allow init system_file:file { execute_no_trans } ;
-allow init btnvtool_exec:file { execute_no_trans } ;
 allow init vendor_file:file { execute_no_trans } ;
 allow init hwservicemanager:binder { call transfer } ;
 allow init socket_device:sock_file { create setattr unlink } ;
